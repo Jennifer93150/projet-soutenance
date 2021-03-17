@@ -1,0 +1,25 @@
+/********** GENERAL **********/
+
+*
+{
+    box-sizing: border-box;
+}
+
+/*********** HEADER **********/
+
+.bg-header {
+    background-color: #B28871;
+}
+
+.header{ /*div qui contient logo-header et nav*/
+
+    display:flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+
+/*********** BODY **********/
+
