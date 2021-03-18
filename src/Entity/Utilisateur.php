@@ -2,209 +2,123 @@
 
 namespace App\Entity;
 
+use App\Repository\UtilisateurRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * @ORM\Table(name="app_users")
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Table(name="utilisateur")
+ * @ORM\Entity(repositoryClass=UtilisateurRepository::class)
  */
-class Utilisateur implements UserInterface, \Serializable
+class Utilisateur
 {
     /**
-     * @ORM\Column(type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $id;
+    public $id;
 
     /**
-     * @ORM\Column(type="string", length=25, unique=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $username;
+    private $nom;
 
     /**
-     * @ORM\Column(type="string", length=64)
-     */
-    private $password;
-
-    /**
-     * @ORM\Column(type="string", length=254, unique=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=254)
+     * @ORM\Column(type="string", length=255)
+     */
+    private $password;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cp;
+
+    /**
+     * @ORM\Column(type="string", length=255)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="string", length=254)
-     */
-    private $code_postal;
-
-    /**
-     * @ORM\Column(type="string", length=254)
+     * @ORM\Column(type="integer")
      */
     private $telephone;
 
-
-    /**
-     * @ORM\Column(name="is_active", type="boolean")
-     */
-    private $isActive;
-
-    public function __construct()
+    public function getId(): ?int
     {
-        $this->isActive = true;
-        // may not be needed, see section on salt below
-        // $this->salt = md5(uniqid('', true));
+        return $this->id;
     }
 
-    public function getUsername()
+    public function getNom(): ?string
     {
-        return $this->username;
+        return $this->nom;
     }
 
-    public function getSalt()
+    public function setNom(string $nom): self
     {
-        // you *may* need a real salt depending on your encoder
-        // see section on salt below
-        return null;
+        $this->nom = $nom;
+
+        return $this;
     }
 
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    public function getRoles()
-    {
-        return array('ROLE_USER');
-    }
-
-    public function eraseCredentials()
-    {
-    }
-
-    /** @see \Serializable::serialize() */
-    public function serialize()
-    {
-        return serialize(array(
-            $this->id,
-            $this->username,
-            $this->password,
-            // see section on salt below
-            // $this->salt,
-        ));
-    }
-
-    /** @see \Serializable::unserialize() */
-    public function unserialize($serialized)
-    {
-        list (
-            $this->id,
-            $this->username,
-            $this->password,
-            // see section on salt below
-            // $this->salt
-        ) = unserialize($serialized, array('allowed_classes' => false));
-    }
-
-    /**
-     * Get the value of email
-     */ 
-    public function getEmail()
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    /**
-     * Set the value of email
-     *
-     * @return  self
-     */ 
-    public function setEmail($email)
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
         return $this;
     }
 
-    /**
-     * Get the value of isActive
-     */ 
-    public function getIsActive()
+    public function getPassword(): ?string
     {
-        return $this->isActive;
+        return $this->password;
     }
 
-    /**
-     * Set the value of isActive
-     *
-     * @return  self
-     */ 
-    public function setIsActive($isActive)
+    public function setPassword(string $password): self
     {
-        $this->isActive = $isActive;
+        $this->password = $password;
 
         return $this;
     }
 
-    /**
-     * Get the value of ville
-     */ 
-    public function getVille()
+    public function getCp(): ?int
+    {
+        return $this->cp;
+    }
+
+    public function setCp(int $cp): self
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
     {
         return $this->ville;
     }
 
-    /**
-     * Set the value of ville
-     *
-     * @return  self
-     */ 
-    public function setVille($ville)
+    public function setVille(string $ville): self
     {
         $this->ville = $ville;
 
         return $this;
     }
 
-    /**
-     * Get the value of code_postal
-     */ 
-    public function getCode_postal()
-    {
-        return $this->code_postal;
-    }
-
-    /**
-     * Set the value of code_postal
-     *
-     * @return  self
-     */ 
-    public function setCode_postal($code_postal)
-    {
-        $this->code_postal = $code_postal;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of telephone
-     */ 
-    public function getTelephone()
+    public function getTelephone(): ?int
     {
         return $this->telephone;
     }
 
-    /**
-     * Set the value of telephone
-     *
-     * @return  self
-     */ 
-    public function setTelephone($telephone)
+    public function setTelephone(int $telephone): self
     {
         $this->telephone = $telephone;
 

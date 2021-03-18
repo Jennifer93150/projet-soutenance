@@ -71,22 +71,28 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
         $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
 <section>
-    <h1 class=\"text-center bg-info\">Connexion</h1>
+    <div>
+        <h1 class=\"text-center bg-info\">Connexion</h1>
+    </div>
+    
 ";
-        // line 11
+        // line 14
         echo "    <div class=\"formulaire\">
-        <button type=\"button\" class=\"btn btn-outline-info\">
-            <a class=\"text-dark btn\" href=\"#\">J'ai déjà un compte</a>
-        </button>
         <button type=\"button\" class=\"btn btn-outline-info\">
             <a class=\"text-dark btn\" href=\"";
         // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connexion");
+        echo "\">J'ai déjà un compte</a>
+        </button>
+        <button type=\"button\" class=\"btn btn-outline-info\">
+            <a class=\"text-dark btn\" href=\"";
+        // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creation");
         echo "\">Je crée un compte</a>
         </button>
         ";
-        // line 18
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 18, $this->source); })()), 'form');
+        // line 21
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 21, $this->source); })()), 'form');
         echo "
     </div>
 </section>
@@ -112,7 +118,7 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
 
     public function getDebugInfo()
     {
-        return array (  89 => 18,  84 => 16,  77 => 11,  71 => 7,  61 => 6,  50 => 1,  48 => 3,  35 => 1,);
+        return array (  95 => 21,  90 => 19,  84 => 16,  80 => 14,  71 => 7,  61 => 6,  50 => 1,  48 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -125,11 +131,14 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
 {% block contenuPrincipal %}
 {{parent()}}
 <section>
-    <h1 class=\"text-center bg-info\">Connexion</h1>
+    <div>
+        <h1 class=\"text-center bg-info\">Connexion</h1>
+    </div>
+    
 {# FORMULAIRE#}
     <div class=\"formulaire\">
         <button type=\"button\" class=\"btn btn-outline-info\">
-            <a class=\"text-dark btn\" href=\"#\">J'ai déjà un compte</a>
+            <a class=\"text-dark btn\" href=\"{{ path('connexion') }}\">J'ai déjà un compte</a>
         </button>
         <button type=\"button\" class=\"btn btn-outline-info\">
             <a class=\"text-dark btn\" href=\"{{ path('creation') }}\">Je crée un compte</a>

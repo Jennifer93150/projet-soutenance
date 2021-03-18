@@ -23,7 +23,7 @@ class UtilisateurController extends AbstractController
 
         //création d'un nouvel objet form dont j'ai appelé la creation par la function par defaut buildForm ds le fichier UtilisateurType.php
         $form = $this->createForm(UtilisateurType::class, $utilisateur);
- 		$form->handleRequest($request);
+        $form->handleRequest($request);
 
         // Si "submit" ET tout valide
         if ($form->isSubmitted() && $form->isValid()) {
@@ -106,6 +106,15 @@ class UtilisateurController extends AbstractController
     {
     
         return $this->render('profil.html.twig');
+    }
+
+    /**
+    * @Route("/politique", name="politique")
+    */
+    public function politique()
+    {
+    
+        return $this->render('politique.html.twig');
     }
     
 }

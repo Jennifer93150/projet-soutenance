@@ -8,10 +8,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
     [
         'stdClass' => [
             'length' => [
-                254,
-            ],
-            'unique' => [
-                true,
+                255,
             ],
         ],
     ],

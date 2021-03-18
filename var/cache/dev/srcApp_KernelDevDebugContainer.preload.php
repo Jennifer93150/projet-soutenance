@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerOEflA3i/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerVYW41rN/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -33,9 +33,13 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\ConnexionController';
+$classes[] = 'App\Controller\ProduitController';
 $classes[] = 'App\Controller\UtilisateurController';
 $classes[] = 'App\Form\ConnexionType';
+$classes[] = 'App\Form\ProduitType';
 $classes[] = 'App\Form\UtilisateurType';
+$classes[] = 'App\Repository\CategorieRepository';
+$classes[] = 'App\Repository\ProduitRepository';
 $classes[] = 'App\Repository\UtilisateurRepository';
 $classes[] = 'Doctrine\DBAL\Tools\Console\Command\RunSqlCommand';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';

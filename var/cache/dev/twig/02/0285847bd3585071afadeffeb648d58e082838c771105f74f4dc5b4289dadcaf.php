@@ -24,10 +24,14 @@ class __TwigTemplate_b2960a64d135f4bbdad071e7a2f1e214806005f33bd28e84c315130f9d8
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "parent.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -39,6 +43,8 @@ class __TwigTemplate_b2960a64d135f4bbdad071e7a2f1e214806005f33bd28e84c315130f9d8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "profil.html.twig"));
 
+        $this->parent = $this->loadTemplate("parent.html.twig", "profil.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -52,13 +58,18 @@ class __TwigTemplate_b2960a64d135f4bbdad071e7a2f1e214806005f33bd28e84c315130f9d8
         return "profil.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array ();
+        return array (  34 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "profil.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/profil.html.twig");
+        return new Source("{% extends 'parent.html.twig' %}", "profil.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/profil.html.twig");
     }
 }

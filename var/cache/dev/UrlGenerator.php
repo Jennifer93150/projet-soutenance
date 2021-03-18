@@ -15,10 +15,13 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
+    'connexion' => [[], ['_controller' => 'App\\Controller\\ConnexionController::new'], [], [['text', '/connexion']], [], []],
+    'produit' => [[], ['_controller' => 'App\\Controller\\ProduitController::new'], [], [['text', '/produit']], [], []],
     'creation' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::new'], [], [['text', '/creation']], [], []],
     'app_utilisateur_parent' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::parent'], [], [['text', '/parent']], [], []],
     'accueil' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::accueil'], [], [['text', '/']], [], []],
     'propose' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::propose'], [], [['text', '/propose']], [], []],
     'recherche' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::produit'], [], [['text', '/recherche']], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::profil'], [], [['text', '/profil']], [], []],
+    'politique' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::politique'], [], [['text', '/politique']], [], []],
 ];
