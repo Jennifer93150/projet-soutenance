@@ -25,7 +25,6 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
-            'stylesheets' => [$this, 'block_stylesheets'],
             'contenuPrincipal' => [$this, 'block_contenuPrincipal'],
         ];
     }
@@ -45,8 +44,8 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/Connexion/creation.html.twig"));
 
-        // line 2
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 2, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
+        // line 3
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 3, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
         // line 1
         $this->parent = $this->loadTemplate("parent.html.twig", "/Connexion/creation.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
@@ -58,33 +57,7 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
 
     }
 
-    // line 3
-    public function block_stylesheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
-
-        // line 4
-        $this->displayParentBlock("stylesheets", $context, $blocks);
-        echo "
-<link href=\"";
-        // line 5
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/style.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\" media=\"all\">
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 8
+    // line 6
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -94,15 +67,29 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
-        // line 9
-        echo "    ";
+        // line 7
         $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
-
+<section>
+    <h1 class=\"text-center bg-info\">Connexion</h1>
 ";
         // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 11, $this->source); })()), 'form');
+        echo "    <div class=\"formulaire\">
+        <button type=\"button\" class=\"btn btn-outline-info\">
+            <a class=\"text-dark btn\" href=\"#\">J'ai déjà un compte</a>
+        </button>
+        <button type=\"button\" class=\"btn btn-outline-info\">
+            <a class=\"text-dark btn\" href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creation");
+        echo "\">Je crée un compte</a>
+        </button>
+        ";
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 18, $this->source); })()), 'form');
         echo "
+    </div>
+</section>
 
 ";
         
@@ -125,24 +112,32 @@ class __TwigTemplate_72bda5ddfed67e99428ecebd78b5809fe201179749dd86749575179b051
 
     public function getDebugInfo()
     {
-        return array (  104 => 11,  98 => 9,  88 => 8,  76 => 5,  72 => 4,  62 => 3,  51 => 1,  49 => 2,  36 => 1,);
+        return array (  89 => 18,  84 => 16,  77 => 11,  71 => 7,  61 => 6,  50 => 1,  48 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'parent.html.twig' %}
+{# PAGE CREATION DE COMPTE#}
 {% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
-{% block stylesheets %}
-{{ parent() }}
-<link href=\"{{asset('../css/style.css')}}\" rel=\"stylesheet\" media=\"all\">
-{% endblock %}
 
+{# MAIN #}
 {% block contenuPrincipal %}
-    {{parent()}}
+{{parent()}}
+<section>
+    <h1 class=\"text-center bg-info\">Connexion</h1>
+{# FORMULAIRE#}
+    <div class=\"formulaire\">
+        <button type=\"button\" class=\"btn btn-outline-info\">
+            <a class=\"text-dark btn\" href=\"#\">J'ai déjà un compte</a>
+        </button>
+        <button type=\"button\" class=\"btn btn-outline-info\">
+            <a class=\"text-dark btn\" href=\"{{ path('creation') }}\">Je crée un compte</a>
+        </button>
+        {{ form(Formulaire) }}
+    </div>
+</section>
 
-{{ form(Formulaire) }}
-
-{% endblock %}
-", "/Connexion/creation.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/Connexion/creation.html.twig");
+{% endblock %}", "/Connexion/creation.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/Connexion/creation.html.twig");
     }
 }

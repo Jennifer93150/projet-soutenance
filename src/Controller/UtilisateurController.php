@@ -7,16 +7,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\UtilisateurType;
 use App\Entity\Utilisateur;
-
 #use App\Service\MessageGenerator;
 // 1-import mon service
 
-/********** CREATION PAGE CONNEXION POUR UTILISATEUR ***********/
+/********** PAGE CREATION DE COMPTE UTILISATEUR ***********/
 class UtilisateurController extends AbstractController
 {
 /******* FONCTION NOUVEL utilisateur GRACE AU FORMULAIRE *******/
     /**
-     * @Route("/creation", name="utilisateur")
+     * @Route("/creation", name="creation")
      */
     public function new(Request $request)
     {
@@ -42,6 +41,26 @@ class UtilisateurController extends AbstractController
         //affichage page creation et son formulaire
         return $this->render('/Connexion/creation.html.twig', ['Formulaire' => $form->createView()]);
     }
+
+    /********************** AFFICHAGE PROFIL************************/
+    /**
+     * @Route("/profil", name="profil" )
+     */
+    public function show(Request $request)
+    {
+        // get Repository va aller au niveau des données dans la table précisée
+        // SELECT query
+        $repository = $this->getDoctrine()->getRepository(Utilisateur::class);
+        // a ce stade il a accès au données
+        // je veux stocker dans la variable $contacts TOUT mes contacts
+        $utilisateur = $repository->findBy(['id'=> 1]);
+
+    // Affichage de la pg profil.html.twig
+    return $this->render('profil.html.twig', ['monprofil'=>$utilisateur]);
+    // entre guillemets c'est le nom utilisé sur TWIG
+    // avec $ c'est utilisé sur le controller
+    }
+
     
 /********** JE CREER MES ROUTES VERS MES PAGES HTML ****************/
     
@@ -59,7 +78,7 @@ class UtilisateurController extends AbstractController
     public function accueil()
     {
     
-        return $this->render('index.html.twig');
+        return $this->render('accueil.html.twig');
     }
 
     /**

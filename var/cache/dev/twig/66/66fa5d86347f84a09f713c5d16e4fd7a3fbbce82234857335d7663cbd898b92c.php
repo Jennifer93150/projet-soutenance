@@ -29,6 +29,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
+            'header' => [$this, 'block_header'],
             'contenuPrincipal' => [$this, 'block_contenuPrincipal'],
             'javascripts' => [$this, 'block_javascripts'],
         ];
@@ -66,15 +67,22 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         ";
         // line 21
         echo "        ";
-        $this->displayBlock('contenuPrincipal', $context, $blocks);
+        $this->displayBlock('header', $context, $blocks);
         // line 40
         echo "        </header>
-        
+        <main>
+            
         ";
         // line 43
+        $this->displayBlock('contenuPrincipal', $context, $blocks);
+        // line 49
+        echo "        </main>
+        
+        ";
+        // line 52
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 46
+        // line 55
         echo "    </body>
 </html>
 ";
@@ -134,26 +142,38 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
     }
 
     // line 21
-    public function block_contenuPrincipal($context, array $blocks = [])
+    public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 22
-        echo "           
-            <div class=\"container-fluid header\">
-                
-                <a class=\"logo-header\" href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"30\" height=\"24\"></a>
-                
+        echo "            
+            <div class=\"container header\">
+                <div class=\"logo-header\">
+                <a href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\"></a>
+                </div>
                 <nav class=\"nav\">
-                    <a href=\"#\">Comment je fais ?</a>
-                    <a href=\"#\">Je propose</a>
-                    <a href=\"#\">Je recherche</a>
-                    <a href=\"#\">Mon profil</a>
+                    <a href=\"";
+        // line 28
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
+        echo "\">Comment je fais ?</a>
+                    <a href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propose");
+        echo "\">Je propose</a>
+                    <a href=\"";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
+        echo "\">Je recherche</a>
+                    <a href=\"";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
+        echo "\">Mon profil</a>
                 </nav>
                      <!-- BOUTON CONNEXION-->
                 <button href=\"#\" class=\"btn\" type=\"button\">Se connecter</button>
@@ -171,6 +191,30 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
     }
 
     // line 43
+    public function block_contenuPrincipal($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
+
+        // line 44
+        echo "            
+
+            
+
+        ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 52
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -180,9 +224,9 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 44
+        // line 53
         echo "            ";
-        // line 45
+        // line 54
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -199,7 +243,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     public function getDebugInfo()
     {
-        return array (  186 => 45,  184 => 44,  174 => 43,  147 => 22,  137 => 21,  124 => 13,  119 => 10,  109 => 9,  90 => 6,  78 => 46,  75 => 43,  71 => 40,  68 => 21,  62 => 16,  59 => 9,  53 => 6,  47 => 1,);
+        return array (  230 => 54,  228 => 53,  218 => 52,  204 => 44,  194 => 43,  175 => 31,  171 => 30,  167 => 29,  163 => 28,  155 => 22,  145 => 21,  132 => 13,  127 => 10,  117 => 9,  98 => 6,  86 => 55,  83 => 52,  79 => 49,  77 => 43,  72 => 40,  69 => 21,  63 => 16,  60 => 9,  54 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -224,17 +268,17 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
     <body>
         <header class=\"bg-header\">
         {# BLOC BODY #}
-        {% block contenuPrincipal %}
-           
-            <div class=\"container-fluid header\">
-                
-                <a class=\"logo-header\" href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"30\" height=\"24\"></a>
-                
+        {% block header %}
+            
+            <div class=\"container header\">
+                <div class=\"logo-header\">
+                <a href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\"></a>
+                </div>
                 <nav class=\"nav\">
-                    <a href=\"#\">Comment je fais ?</a>
-                    <a href=\"#\">Je propose</a>
-                    <a href=\"#\">Je recherche</a>
-                    <a href=\"#\">Mon profil</a>
+                    <a href=\"{{ path('accueil') }}\">Comment je fais ?</a>
+                    <a href=\"{{ path('propose') }}\">Je propose</a>
+                    <a href=\"{{ path('recherche') }}\">Je recherche</a>
+                    <a href=\"{{ path('profil') }}\">Mon profil</a>
                 </nav>
                      <!-- BOUTON CONNEXION-->
                 <button href=\"#\" class=\"btn\" type=\"button\">Se connecter</button>
@@ -244,6 +288,15 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
            
         {% endblock %}
         </header>
+        <main>
+            
+        {% block contenuPrincipal %}
+            
+
+            
+
+        {% endblock %}
+        </main>
         
         {#BLOC JAVASCRIPT#}
         {% block javascripts %}

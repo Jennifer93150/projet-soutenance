@@ -14,22 +14,20 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
 /********************* FORMULAIRE NOUVEL UTILISATEUR ***************************/
-class UtilisateurType extends AbstractType
+class ConnexionType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
              
-            ->add('username', TextType::class, ['label' => 'Nom','required' => true,])
+            
             ->add('email', EmailType::class, ['label' => 'Email','required' => true,])
             ->add('password', TextType::class, ['label' => 'Mot de passe','required' => true,]) 
-            #->add('confirmation_mdp', EmailType::class, ['label' => 'email','required' => true,]) ->add('confirmation_mdp', TextType::class, ['label' => 'confirmation_mdp','required' => true,])
-            #->add('accept_politique', CheckboxType::class, ['label' => 'accept_politique', 'required' => true])
             
             /* NE PAS OUBLIER LES ENTITY QUI Y SONT LIEES*/
 
-            ->add('enregistrer', SubmitType::class, [
-                'attr' => ['class' => 'enregistrer'],
+            ->add('connexion', SubmitType::class, [
+                'attr' => ['class' => 'connexion'],
             ]);
 
         ;
@@ -41,8 +39,6 @@ class UtilisateurType extends AbstractType
             'data_class' => Utilisateur::class,
         ]);
     }
-
-    
 
     
 }

@@ -13,7 +13,7 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/creation' => [[['_route' => 'utilisateur', '_controller' => 'App\\Controller\\UtilisateurController::new'], null, null, null, false, false, null]],
+        '/creation' => [[['_route' => 'creation', '_controller' => 'App\\Controller\\UtilisateurController::new'], null, null, null, false, false, null]],
         '/parent' => [[['_route' => 'app_utilisateur_parent', '_controller' => 'App\\Controller\\UtilisateurController::parent'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\UtilisateurController::accueil'], null, null, null, false, false, null]],
         '/propose' => [[['_route' => 'propose', '_controller' => 'App\\Controller\\UtilisateurController::propose'], null, null, null, false, false, null]],

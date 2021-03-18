@@ -15,33 +15,57 @@
         {% endblock %}
         
     </head>
+    {# PARTIE BODY #}
     <body>
         <header class="bg-header">
-        {# BLOC BODY #}
-        {% block contenuPrincipal %}
-           
-            <div class="container-fluid header">
-                
-                <a class="logo-header" href="#"><img src="../img/logo.png" alt="logo" width="30" height="24"></a>
-                
+                    {# BLOC HEADER #}
+        {% block header %}
+            
+            <div class="container header">
+                <div class="logo-header">
+                <a href="#"><img src="../img/logo.png" alt="logo" width="45" height="35"></a>
+                </div>
                 <nav class="nav">
-                    <a href="#">Comment je fais ?</a>
-                    <a href="#">Je propose</a>
-                    <a href="#">Je recherche</a>
-                    <a href="#">Mon profil</a>
+                    <a href="{{ path('accueil') }}">Comment je fais ?</a>
+                    <a href="{{ path('propose') }}">Je propose</a>
+                    <a href="{{ path('recherche') }}">Je recherche</a>
+                    <a href="{{ path('profil') }}">Mon profil</a>
                 </nav>
                      <!-- BOUTON CONNEXION-->
                 <button href="#" class="btn" type="button">Se connecter</button>
                    
             </div>
            
-           
         {% endblock %}
         </header>
+                        {# BLOC CONTENU PRINCIPAL #}
+        <main>
+
+                    
+
+        {% block contenuPrincipal %}
+
+        <section class="bg-principal">
+                    {#A FAIRE INTEGRER BACKGROUND#}
+        </section>
+
+        {% endblock %}
+        </main>
+
+                    {# BLOC FOOTER #}
+        <footer>
+
+        {% block footer %}
+                    {#A FAIRE#}
+        {% endblock %}
+
+        </footer>
         
+
         {#BLOC JAVASCRIPT#}
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+
     </body>
 </html>

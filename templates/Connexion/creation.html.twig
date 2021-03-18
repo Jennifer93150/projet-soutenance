@@ -1,13 +1,22 @@
 {% extends 'parent.html.twig' %}
+{# PAGE CREATION DE COMPTE#}
 {% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
-{% block stylesheets %}
-{{ parent() }}
-<link href="{{asset('../css/style.css')}}" rel="stylesheet" media="all">
-{% endblock %}
 
+{# MAIN #}
 {% block contenuPrincipal %}
-    {{parent()}}
-
-{{ form(Formulaire) }}
+{{parent()}}
+<section>
+    <h1 class="text-center bg-info">Connexion</h1>
+{# FORMULAIRE#}
+    <div class="formulaire">
+        <button type="button" class="btn btn-outline-info">
+            <a class="text-dark btn" href="{{ path('connexion') }}">J'ai déjà un compte</a>
+        </button>
+        <button type="button" class="btn btn-outline-info">
+            <a class="text-dark btn" href="{{ path('creation') }}">Je crée un compte</a>
+        </button>
+        {{ form(Formulaire) }}
+    </div>
+</section>
 
 {% endblock %}
