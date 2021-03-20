@@ -70,6 +70,15 @@ class NavbarController extends AbstractController
     }
 
     /**
+    * @Route("/message", name="message")
+    */
+    public function message()
+    {
+    
+        return $this->render('/user/messages.html.twig');
+    }
+
+    /**
     * @Route("/contact", name="contact")
     */
     public function contact()

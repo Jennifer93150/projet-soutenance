@@ -54,7 +54,7 @@ h1{
 
 /********* FORMULAIRE PAGES CONNEXION *********/
 
-.formulaire{ /* contenaire du formulaire*/
+.bg-vert{ /* contenaire du formulaire*/
 
     background: #CFFFE280;
     color: rgb(0, 0, 0);
@@ -71,7 +71,7 @@ h1{
 /******** PAGE AJOUTER UN TROC *****************/
 
 .type{
-    background-color: #b6fbd3;
+    background-color: #CFFFE2;
     font-size: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -80,7 +80,7 @@ h1{
 }
 
 .annonce{
-    background-color: #b6fbd3;
+    background-color: #CFFFE2;
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -91,8 +91,3 @@ h1{
 
 }
 
-.troc_h1{
-   
-    text-align: center;
-    background-color:  #b6fbd3;
-}

@@ -39,9 +39,23 @@ class Produit
      */
     private $description;
 
+//JE LIE mon produit A user
+    /**
+     * Les produits sont liées à un user
+     * @ORM\ManyToOne(targetEntity="App\Entity\Produit", inversedBy="users")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
+    /**
+     * Un produit a une catégorie
+     * mappedBy=l'entité appelle les categories 
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categorie", inversedBy="produits")
+     * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
+     */
+    private $categorie;
+
    
-
-
     public function getId(): ?int
     {
         return $this->id;
@@ -94,6 +108,36 @@ class Produit
 
         return $this;
     }
+
+    public function getUser(): ?int
+    {
+        return $this->user;
+    }
+
+    public function setUser(int $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
    
-  
+    /**
+     * Get un produit a potentiellement plusieurs catégories
+     */ 
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * Set un produit a potentiellement plusieurs catégories
+     *
+     * @return  self
+     */ 
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
 }

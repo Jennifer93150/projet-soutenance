@@ -36,7 +36,7 @@ class ProduitType extends AbstractType
             /*->add('codepostal', IntegerType::class, ['label' => 'code postal','required' => true,]) */
            /* ->add('ville', TextType::class, ['label' => 'ville','required' => true,])*/
             #->add('telephone', IntegerType::class, ['label' => 'telephone', 'required' => true,])
-            ->add('photo', FileType::class, ['label' => 'photo','required' => true,])
+            ->add('photo', FileType::class, ['label' => 'photo'])
 
             ->add('titre',TextType::class, ['label' => 'titre','required' => true,])
             ->add('description', TextType::class, ['label' => 'description','required' => true,])

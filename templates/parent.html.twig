@@ -31,9 +31,10 @@
                         <a href="{{ path('ajout') }}">J'ajoute un troc</a>
                         <a href="{{ path('recherche') }}">Je recherche</a>
 
-                        <!--Affichage "mon profil" et "Me déconnecter" slmt si connecté-->
+                        <!--Affichage du lien "mon profil" et "Me déconnecter" slmt si je ss connecté-->
                         {% if is_granted('ROLE_USER')%}
                             <a href="{{ path('profil') }}">Mon profil</a>
+                            <a href="{{ path('message') }}">Message</a>
                             <button class="btn" type="button">
                                 <a href="{{ path('app_logout') }}">Me déconnecter</a>
                             </button>

@@ -1,1 +1,64 @@
 {% extends 'parent.html.twig' %}
+
+{% block contenuPrincipal %}
+{{parent()}}
+
+    <section>
+        <div >
+            <h1 class="text-center">Mon profil</h1>
+        </div>
+        <div class="bg-vert">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../public/img/profil.png" alt="img-profil">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ app.user.nom }}</h5>
+                            <p class="card-text">{{ app.user.ville }}</p>
+                            <p class="card-text"><small class="text-muted">{{ app.user.cp }}</small>
+                            </p>
+                            <p class="card-text">{{ app.user.telephone }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>A propos de moi</h2>
+                <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
+            </div>
+            <div>
+                <h2>Mes trocs</h2>
+                <!-- Faire une boucle for 
+                
+                -->
+                <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../public/img/profil.png" alt="img-profil">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+           
+       
+
+        
+            
+        
+        </div>
+    </section>
+
+
+{% endblock %}

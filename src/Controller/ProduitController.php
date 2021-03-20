@@ -16,7 +16,7 @@ class ProduitController extends AbstractController
     # Fonction ajout nouveau produit
 
     /**
-     * @Route("/ajout-troc", name="ajout")
+     * @Route("/ajouter", name="ajout")
      */
     public function new(Request $request)
     {

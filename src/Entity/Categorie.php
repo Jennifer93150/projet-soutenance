@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\CategorieRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,19 +23,56 @@ class Categorie
      */
     private $nom;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+    /**
+     * Une categorie a potentiellement plusieurs produits
+     * target c entité produit, mappedBy l'entité categorie appelle les produits
+     * @ORM\OneToMany(targetEntity="App\Entity\Produit", mappedBy="categorie")
+     */
+    private $produits;
 
-    public function getNom(): ?string
+    public function __construct()
+    {
+        $this->produits = new ArrayCollection();
+        
+    }
+   
+
+    /**
+     * Get the value of nom
+     */
+    public function getNom()
     {
         return $this->nom;
     }
 
-    public function setNom(string $nom): self
+    /**
+     * Set the value of nom
+     *
+     * @return  self
+     */
+    public function setNom($nom)
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get une categorie a potentiellement plusieurs produits
+     */
+    public function getProduits()
+    {
+        return $this->produits;
+    }
+
+    /**
+     * Set une categorie a potentiellement plusieurs produits
+     *
+     * @return  self
+     */
+    public function setProduits($produits)
+    {
+        $this->produits = $produits;
 
         return $this;
     }

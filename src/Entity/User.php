@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -61,11 +62,34 @@ class User implements UserInterface
      */
     private $acceptation;
 
+    
+
     /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
 
+//JE LIE user A produit
+    /**
+     * Un user a potentiellement plusieurs produits
+     * @ORM\OneToMany(targetEntity="App\Entity\Produit", mappedBy="user")
+     */
+    private $produits;
+
+//JE LIE user A produit
+    /**
+     * Un user a potentiellement plusieurs produits
+     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="message")
+     */
+    private $messages;
+    
+
+    public function __construct()
+    {
+        $this->produits = new ArrayCollection();
+        $this->messages = new ArrayCollection();
+        
+    }
     
     public function getId(): ?int
     {
@@ -204,6 +228,40 @@ class User implements UserInterface
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getProduits(): ?string
+    {
+        return $this->produits;
+    }
+
+    public function setProduits(string $produits): self
+    {
+        $this->produits = $produits;
+
+        return $this;
+    }
+
+   
+
+    /**
+     * Get un user a potentiellement plusieurs produits
+     */ 
+    public function getMessages()
+    {
+        return $this->messages;
+    }
+
+    /**
+     * Set un user a potentiellement plusieurs produits
+     *
+     * @return  self
+     */ 
+    public function setMessages($messages)
+    {
+        $this->messages = $messages;
 
         return $this;
     }
