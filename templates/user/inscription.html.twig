@@ -1,0 +1,28 @@
+{% extends 'parent.html.twig' %}
+{# PAGE CREATION DE COMPTE#}
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
+{% block title %}Troc'Eco | Connexion{% endblock %}
+
+{# MAIN #}
+{% block contenuPrincipal %}
+{{parent()}}
+<section>
+    <div>
+        <h1 class="text-center">Connexion</h1>
+    </div>
+    
+{# FORMULAIRE#}
+    <form method="post">
+        <div class="formulaire">
+            <button type="button" class="btn btn-outline-info">
+                <a class="text-dark btn" href="{{ path('app_login') }}">J'ai déjà un compte</a>
+            </button>
+            
+            
+            {{ form(Formulaire) }}
+            
+        </div>
+    </form>
+</section>
+
+{% endblock %}

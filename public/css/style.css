@@ -46,20 +46,53 @@ main{
 
 }
 
-/********* PAGES CONNEXION *********/
+h1{
+    background-color: #CFFFE280;
+}
 
-/********* FORMULAIRE *********/
+/********* LES FORMULAIRES *********/
+
+/********* FORMULAIRE PAGES CONNEXION *********/
 
 .formulaire{ /* contenaire du formulaire*/
 
-    background: #CFFFE2;
+    background: #CFFFE280;
     color: rgb(0, 0, 0);
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    
     padding: 10px;
     width: 70%;
 
+}
+
+
+/******** PAGE AJOUTER UN TROC *****************/
+
+.type{
+    background-color: #b6fbd3;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-right:80%;
+}
+
+.annonce{
+    background-color: #b6fbd3;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-right:30px;
+    margin-left:30px;
+    
+
+}
+
+.troc_h1{
+   
+    text-align: center;
+    background-color:  #b6fbd3;
 }

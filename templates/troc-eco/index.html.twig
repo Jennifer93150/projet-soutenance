@@ -1,0 +1,22 @@
+{% extends 'parent.html.twig' %}
+{# Page Accueil #}
+{% block contenuPrincipal %}
+   
+    <section class="bg-principal">
+
+        <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
+        IS_AUTHENTICATED_FULLY => si réellement connecté-->
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+            <a class="" href="{{ path('profil') }}">
+                Bonjour {{ app.user.nom }}.
+            </a>
+
+            <a class="" href="{{ path('profil') }}">
+                <i class="fas fa-user"></i>
+            </a>
+                        
+        {% endif %}
+    </section>
+
+{% endblock %}

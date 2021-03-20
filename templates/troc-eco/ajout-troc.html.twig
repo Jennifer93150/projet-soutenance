@@ -1,0 +1,40 @@
+{% extends 'parent.html.twig' %}
+
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
+
+
+
+{% block contenuPrincipal %}
+{{parent()}}
+
+    <section>
+        <div class="troc_h1">
+            <h1> Ajouter un troc</h1>
+        </div>
+
+        <div class="formulaire">
+            {{ form_start(Formulaire) }}
+                <div class="my-custom-class-for-errors">
+                    {{ form_errors(Formulaire) }}
+                </div>
+
+                <div class="column">
+                    <h2 class="type">Type de troc</h2>
+                    <div class="col">
+                        {{ form_row(Formulaire.type) }}
+                    </div>
+                    <h2 class="annonce">Annonce</h2>
+                    <div class="col" id="some-custom-id">
+                        {{ form_row(Formulaire.photo) }}
+                        {{ form_row(Formulaire.titre) }}
+                        {{ form_row(Formulaire.description) }}
+                        {{ form_row(Formulaire.save) }}
+                    </div>
+                        
+                </div>
+            {{ form_end(Formulaire) }}
+        </div>
+    </section>
+
+
+{% endblock %}

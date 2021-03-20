@@ -24,8 +24,8 @@ class ProduitType extends AbstractType
             ->add('type', ChoiceType::class, [
                 'label' => 'Type',
                 'choices' => [
-                     'Je propose' => 2,
-                     'Je recherche' => 1,
+                     'J\'ajoute' => 'Ajout',
+                     'Je recherche' => 'Recherche',
                    
                  ],
                 'expanded' => true,

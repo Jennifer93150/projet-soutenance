@@ -2,10 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        {# bloc titre #}
         <title>{% block title %}Troc'Eco{% endblock %}</title>
-        
-        {#BLOC STYLESHEETS#}
+
         {% block stylesheets %}
             <!-- lien vers bootstrap-->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> 
@@ -15,48 +13,91 @@
         {% endblock %}
         
     </head>
-    {# PARTIE BODY #}
+    <!-- PARTIE BODY -->
     <body>
         <header class="bg-header">
-                    {# BLOC HEADER #}
-        {% block header %}
-            
-            <div class="container header">
-                <div class="logo-header">
-                <a href="#"><img src="../img/logo.png" alt="logo" width="45" height="35"></a>
+            <!-- BLOC HEADER -->
+            {% block header %}
+                <!-- BARRE DE NAVIGATION -->
+                <div class="container header">
+                    <div class="logo-header">
+                        <a href="{{ path('accueil') }}">
+                            <img src="../img/logo.png" alt="logo" width="45" height="35">
+                        </a>
+                    </div>
+
+                    <nav class="nav">
+                        <a href="{{ path('accueil') }}">Comment je fais ?</a>
+                        <a href="{{ path('ajout') }}">J'ajoute un troc</a>
+                        <a href="{{ path('recherche') }}">Je recherche</a>
+
+                        <!--Affichage "mon profil" et "Me déconnecter" slmt si connecté-->
+                        {% if is_granted('ROLE_USER')%}
+                            <a href="{{ path('profil') }}">Mon profil</a>
+                            <button class="btn" type="button">
+                                <a href="{{ path('app_logout') }}">Me déconnecter</a>
+                            </button>
+                        {% endif %}
+                    </nav>
+
+                    <button class="btn" type="button">
+                        <a href="{{ path('inscription') }}">Se connecter</a>
+                    </button>
+
+                    <!-- !!! TROUVER UNE CONDITION QUI PERMETTRAIT DE MODIFIER BTN SE CONNECTER EN SE DECONNECTER APRES QUE USER SOIT CONNECTE !!!  -->
+
                 </div>
-                <nav class="nav">
-                    <a href="{{ path('accueil') }}">Comment je fais ?</a>
-                    <a href="{{ path('propose') }}">Je propose</a>
-                    <a href="{{ path('recherche') }}">Je recherche</a>
-                    <a href="{{ path('profil') }}">Mon profil</a>
-                </nav>
-                     <!-- BOUTON CONNEXION-->
-                <button href="#" class="btn" type="button">Se connecter</button>
-                   
-            </div>
-           
-        {% endblock %}
+            {% endblock %}
+
         </header>
-                        {# BLOC CONTENU PRINCIPAL #}
+         <!--   MAIN     -->
         <main>
+            {% block contenuPrincipal %}
+                
 
-                    
-
-        {% block contenuPrincipal %}
-
-        <section class="bg-principal">
-                    {#A FAIRE INTEGRER BACKGROUND#}
-        </section>
-
-        {% endblock %}
+            {% endblock %}
         </main>
 
-                    {# BLOC FOOTER #}
+        {# BLOC FOOTER #}
         <footer>
 
         {% block footer %}
-                    {#A FAIRE#}
+            <div class="footer">
+            <!-- DEBUT CONTENU FOOTER -->
+                <!-- btn de scroll TELECHARGER FONTAWESOME -->
+                <a href="#" class="scroll-btn">
+                     <button class="bouton-scroll"><i class="fas fa-arrow-up"></i></button>
+                </a>
+
+                <!-- DEBUT FOOTER  -->
+
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <a href="{{ path('contact') }}">Contactez-nous</a>
+                        
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="{{ path('politique') }}">Politique de confidentialité</a>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+
+                    
+                    <!-- carte  -->
+                        <!--<div class="col-md-8">
+                                <iframe id="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6037205336725!2d2.3024096157624276!3d48.86576657928823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdc9500b9a9%3A0x411c1baafb72ac94!2s12%20Avenue%20Montaigne%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1614327456646!5m2!1sfr!2sfr"
+                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>-->
+
+                
+                </div>
+
+
+                
+            </div>
         {% endblock %}
 
         </footer>

@@ -1,0 +1,58 @@
+{% extends 'parent.html.twig' %}
+
+{% block title %}Troc'Eco | Connexion{% endblock %}
+
+{% block contenuPrincipal %}
+{{parent()}}
+
+    <div><h1 class="text-center">Connexion</h1></div>
+     <!-- Formualaire -->
+    <form method="post">
+    <!-- Message erreur -->
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                Vous êtes déjà connecté en tant que {{ app.user.nom }}, 
+            </div>
+        {% endif %}
+
+        
+       
+        
+        <div class="formulaire">
+            <div>
+                <button type="button" class="btn btn-outline-info mb-3">
+                    <a class="text-dark btn" href="{{ path('inscription') }}">Je crée un compte</a>
+                </button>
+            </div>
+            <div>
+                <label for="inputEmail">Email</label>
+                <input type="email" value="{{ nom }}" name="email" id="inputEmail" class="form-control mt-2 mb-3" required autofocus>
+                <label for="inputPassword">Mot de passe</label>
+                <input type="password" name="password" id="inputPassword" class="form-control mt-2 mb-3" required>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}">
+
+                <button class="btn btn-outline-info" type="submit">Se connecter</button>
+            </div>
+        </div>
+        
+
+        {#
+            Décommentez cette section et ajoutez une option Remember_me sous votre pare-feu pour activer la fonctionnalité Remember me.
+            See https://symfony.com/doc/current/security/remember_me.html
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+        #}
+
+        
+    </form>
+{% endblock %}
