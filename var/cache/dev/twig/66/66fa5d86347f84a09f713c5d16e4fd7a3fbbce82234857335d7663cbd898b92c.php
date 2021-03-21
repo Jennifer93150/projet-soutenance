@@ -50,58 +50,52 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 <html lang=\"fr\">
     <head>
         <meta charset=\"UTF-8\">
-        ";
-        // line 6
-        echo "        <title>";
+        <title>";
+        // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        
+
         ";
-        // line 9
-        echo "        ";
+        // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
+        // line 14
         echo "        
     </head>
-    ";
-        // line 19
-        echo "    <body>
+    <!-- PARTIE BODY -->
+    <body>
         <header class=\"bg-header\">
-                    ";
-        // line 22
-        echo "        ";
+            <!-- BLOC HEADER -->
+            ";
+        // line 20
         $this->displayBlock('header', $context, $blocks);
-        // line 40
-        echo "        </header>
-                        ";
-        // line 42
-        echo "        <main>
-
-                    
-
-        ";
-        // line 46
+        // line 52
+        echo "
+        </header>
+         <!--   MAIN     -->
+        <main>
+            ";
+        // line 56
         $this->displayBlock('contenuPrincipal', $context, $blocks);
-        // line 53
+        // line 60
         echo "        </main>
 
-                    ";
-        // line 56
+        ";
+        // line 63
         echo "        <footer>
 
         ";
-        // line 58
+        // line 65
         $this->displayBlock('footer', $context, $blocks);
-        // line 61
+        // line 103
         echo "
         </footer>
         
 
         ";
-        // line 66
+        // line 108
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 69
+        // line 111
         echo "
     </body>
 </html>
@@ -114,7 +108,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 6
+    // line 5
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -133,7 +127,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 9
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -143,12 +137,12 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 10
+        // line 8
         echo "            <!-- lien vers bootstrap-->
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\"> 
             <!-- lien vers fichier css -->
             <link rel=\"stylesheet\" href=\"";
-        // line 13
+        // line 11
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/style.css"), "html", null, true);
         echo "\" media=\"all\">
             
@@ -161,7 +155,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 22
+    // line 20
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -171,36 +165,66 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 23
-        echo "            
-            <div class=\"container header\">
-                <div class=\"logo-header\">
-                <a href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\"></a>
-                </div>
-                <nav class=\"nav\">
-                    <a href=\"";
-        // line 29
+        // line 21
+        echo "                <!-- BARRE DE NAVIGATION -->
+                <div class=\"container header\">
+                    <div class=\"logo-header\">
+                        <a href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
+        echo "\">
+                            <img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\">
+                        </a>
+                    </div>
+
+                    <nav class=\"nav\">
+                        <a href=\"";
+        // line 30
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Comment je fais ?</a>
-                    <a href=\"";
-        // line 30
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propose");
-        echo "\">Je propose</a>
-                    <a href=\"";
+                        <a href=\"";
         // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout");
+        echo "\">J'ajoute un troc</a>
+                        <a href=\"";
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
         echo "\">Je recherche</a>
-                    <a href=\"";
-        // line 32
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
-        echo "\">Mon profil</a>
-                </nav>
-                     <!-- BOUTON CONNEXION-->
-                <button href=\"#\" class=\"btn\" type=\"button\">Se connecter</button>
-                   
-            </div>
-           
-        ";
+
+                        <!--Affichage du lien \"mon profil\" et \"Me déconnecter\" slmt si je ss connecté-->
+                        ";
+        // line 35
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 36
+            echo "                            <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
+            echo "\">Mon profil</a>
+                            <a href=\"";
+            // line 37
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message");
+            echo "\">Message</a>
+                            <button class=\"btn\" type=\"button\">
+                                <a href=\"";
+            // line 39
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Me déconnecter</a>
+                            </button>
+                        ";
+        }
+        // line 42
+        echo "                    </nav>
+
+                    <button class=\"btn\" type=\"button\">
+                        <a href=\"";
+        // line 45
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
+        echo "\">Se connecter</a>
+                    </button>
+
+                    <!-- !!! TROUVER UNE CONDITION QUI PERMETTRAIT DE MODIFIER BTN SE CONNECTER EN SE DECONNECTER APRES QUE USER SOIT CONNECTE !!!  -->
+
+                </div>
+            ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -209,7 +233,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 46
+    // line 56
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -219,14 +243,10 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
-        // line 47
-        echo "
-        <section class=\"bg-principal\">
-                    ";
-        // line 50
-        echo "        </section>
+        // line 57
+        echo "                
 
-        ";
+            ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -235,7 +255,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 58
+    // line 65
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -245,10 +265,50 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 59
-        echo "                    ";
-        // line 60
-        echo "        ";
+        // line 66
+        echo "            <div class=\"footer\">
+            <!-- DEBUT CONTENU FOOTER -->
+                <!-- btn de scroll TELECHARGER FONTAWESOME -->
+                <a href=\"#\" class=\"scroll-btn\">
+                     <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+                </a>
+
+                <!-- DEBUT FOOTER  -->
+
+                <div class=\"row\">
+                    <div class=\"col-md-6 text-left\">
+                        <a href=\"";
+        // line 77
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
+        echo "\">Contactez-nous</a>
+                        
+                    </div>
+                    <div class=\"col-md-6 text-right\">
+                        <a href=\"";
+        // line 81
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("politique");
+        echo "\">Politique de confidentialité</a>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+
+                    
+                    <!-- carte  -->
+                        <!--<div class=\"col-md-8\">
+                                <iframe id=\"map\"
+                                src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6037205336725!2d2.3024096157624276!3d48.86576657928823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdc9500b9a9%3A0x411c1baafb72ac94!2s12%20Avenue%20Montaigne%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1614327456646!5m2!1sfr!2sfr\"
+                                style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>
+                            </div>-->
+
+                
+                </div>
+
+
+                
+            </div>
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -257,7 +317,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     }
 
-    // line 66
+    // line 108
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -267,9 +327,9 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 67
+        // line 109
         echo "            ";
-        // line 68
+        // line 110
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -286,7 +346,7 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 
     public function getDebugInfo()
     {
-        return array (  273 => 68,  271 => 67,  261 => 66,  251 => 60,  249 => 59,  239 => 58,  227 => 50,  223 => 47,  213 => 46,  195 => 32,  191 => 31,  187 => 30,  183 => 29,  175 => 23,  165 => 22,  152 => 13,  147 => 10,  137 => 9,  118 => 6,  105 => 69,  102 => 66,  96 => 61,  94 => 58,  90 => 56,  86 => 53,  84 => 46,  78 => 42,  75 => 40,  72 => 22,  68 => 19,  64 => 16,  61 => 9,  55 => 6,  49 => 1,);
+        return array (  333 => 110,  331 => 109,  321 => 108,  289 => 81,  282 => 77,  269 => 66,  259 => 65,  247 => 57,  237 => 56,  220 => 45,  215 => 42,  209 => 39,  204 => 37,  199 => 36,  197 => 35,  191 => 32,  187 => 31,  183 => 30,  174 => 24,  169 => 21,  159 => 20,  146 => 11,  141 => 8,  131 => 7,  112 => 5,  99 => 111,  96 => 108,  90 => 103,  88 => 65,  84 => 63,  80 => 60,  78 => 56,  72 => 52,  70 => 20,  62 => 14,  60 => 7,  55 => 5,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -295,10 +355,8 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
 <html lang=\"fr\">
     <head>
         <meta charset=\"UTF-8\">
-        {# bloc titre #}
         <title>{% block title %}Troc'Eco{% endblock %}</title>
-        
-        {#BLOC STYLESHEETS#}
+
         {% block stylesheets %}
             <!-- lien vers bootstrap-->
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\"> 
@@ -308,48 +366,92 @@ class __TwigTemplate_87914cc4d55bd361ebe50da17495913c71f8fb004bbb53967a93d159974
         {% endblock %}
         
     </head>
-    {# PARTIE BODY #}
+    <!-- PARTIE BODY -->
     <body>
         <header class=\"bg-header\">
-                    {# BLOC HEADER #}
-        {% block header %}
-            
-            <div class=\"container header\">
-                <div class=\"logo-header\">
-                <a href=\"#\"><img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\"></a>
+            <!-- BLOC HEADER -->
+            {% block header %}
+                <!-- BARRE DE NAVIGATION -->
+                <div class=\"container header\">
+                    <div class=\"logo-header\">
+                        <a href=\"{{ path('accueil') }}\">
+                            <img src=\"../img/logo.png\" alt=\"logo\" width=\"45\" height=\"35\">
+                        </a>
+                    </div>
+
+                    <nav class=\"nav\">
+                        <a href=\"{{ path('accueil') }}\">Comment je fais ?</a>
+                        <a href=\"{{ path('ajout') }}\">J'ajoute un troc</a>
+                        <a href=\"{{ path('recherche') }}\">Je recherche</a>
+
+                        <!--Affichage du lien \"mon profil\" et \"Me déconnecter\" slmt si je ss connecté-->
+                        {% if is_granted('ROLE_USER')%}
+                            <a href=\"{{ path('profil') }}\">Mon profil</a>
+                            <a href=\"{{ path('message') }}\">Message</a>
+                            <button class=\"btn\" type=\"button\">
+                                <a href=\"{{ path('app_logout') }}\">Me déconnecter</a>
+                            </button>
+                        {% endif %}
+                    </nav>
+
+                    <button class=\"btn\" type=\"button\">
+                        <a href=\"{{ path('inscription') }}\">Se connecter</a>
+                    </button>
+
+                    <!-- !!! TROUVER UNE CONDITION QUI PERMETTRAIT DE MODIFIER BTN SE CONNECTER EN SE DECONNECTER APRES QUE USER SOIT CONNECTE !!!  -->
+
                 </div>
-                <nav class=\"nav\">
-                    <a href=\"{{ path('accueil') }}\">Comment je fais ?</a>
-                    <a href=\"{{ path('propose') }}\">Je propose</a>
-                    <a href=\"{{ path('recherche') }}\">Je recherche</a>
-                    <a href=\"{{ path('profil') }}\">Mon profil</a>
-                </nav>
-                     <!-- BOUTON CONNEXION-->
-                <button href=\"#\" class=\"btn\" type=\"button\">Se connecter</button>
-                   
-            </div>
-           
-        {% endblock %}
+            {% endblock %}
+
         </header>
-                        {# BLOC CONTENU PRINCIPAL #}
+         <!--   MAIN     -->
         <main>
+            {% block contenuPrincipal %}
+                
 
-                    
-
-        {% block contenuPrincipal %}
-
-        <section class=\"bg-principal\">
-                    {#A FAIRE INTEGRER BACKGROUND#}
-        </section>
-
-        {% endblock %}
+            {% endblock %}
         </main>
 
-                    {# BLOC FOOTER #}
+        {# BLOC FOOTER #}
         <footer>
 
         {% block footer %}
-                    {#A FAIRE#}
+            <div class=\"footer\">
+            <!-- DEBUT CONTENU FOOTER -->
+                <!-- btn de scroll TELECHARGER FONTAWESOME -->
+                <a href=\"#\" class=\"scroll-btn\">
+                     <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+                </a>
+
+                <!-- DEBUT FOOTER  -->
+
+                <div class=\"row\">
+                    <div class=\"col-md-6 text-left\">
+                        <a href=\"{{ path('contact') }}\">Contactez-nous</a>
+                        
+                    </div>
+                    <div class=\"col-md-6 text-right\">
+                        <a href=\"{{ path('politique') }}\">Politique de confidentialité</a>
+                        
+                    </div>
+                    <div>
+
+                    </div>
+
+                    
+                    <!-- carte  -->
+                        <!--<div class=\"col-md-8\">
+                                <iframe id=\"map\"
+                                src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.6037205336725!2d2.3024096157624276!3d48.86576657928823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdc9500b9a9%3A0x411c1baafb72ac94!2s12%20Avenue%20Montaigne%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1614327456646!5m2!1sfr!2sfr\"
+                                style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>
+                            </div>-->
+
+                
+                </div>
+
+
+                
+            </div>
         {% endblock %}
 
         </footer>

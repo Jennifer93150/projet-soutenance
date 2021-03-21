@@ -66,7 +66,7 @@ class ApploginAuthenticator extends AbstractFormLoginAuthenticator implements Pa
         if (!$this->csrfTokenManager->isTokenValid($token)) {
             throw new InvalidCsrfTokenException();
         }
-
+        # recuperation de l'email de l'user
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['email' => $credentials['email']]);
 
         if (!$user) {
@@ -79,6 +79,7 @@ class ApploginAuthenticator extends AbstractFormLoginAuthenticator implements Pa
 
     public function checkCredentials($credentials, UserInterface $user)
     {
+        # verification du  mdp de user
         return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
     }
 

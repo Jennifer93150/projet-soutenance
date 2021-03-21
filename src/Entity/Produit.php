@@ -4,11 +4,15 @@ namespace App\Entity;
 
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
  * @ORM\Table(name="produit")
+ * @Vich\Uploadable
  */
 class Produit
 {
@@ -27,12 +31,14 @@ class Produit
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $type;
+    private $photo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Vich\UploadableField(mapping="product_photos", fileNameProperty="photo")
+     * @var File
      */
-    private $photo;
+    private $photoFile;
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -41,8 +47,9 @@ class Produit
 
 //JE LIE mon produit A user
     /**
-     * Les produits sont liées à un user
-     * @ORM\ManyToOne(targetEntity="App\Entity\Produit", inversedBy="users")
+     * Un produit a une catégorie
+     * mappedBy=l'entité appelle le user 
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="produits")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
@@ -137,6 +144,33 @@ class Produit
     public function setCategorie($categorie)
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+   
+
+
+    /**
+     * Get the value of photoFile
+     *
+     * @return  File
+     */ 
+    public function getPhotoFile()
+    {
+        return $this->photoFile;
+    }
+
+    /**
+     * Set the value of photoFile
+     *
+     * @param  File  $photoFile
+     *
+     * @return  self
+     */ 
+    public function setPhotoFile(File $photoFile)
+    {
+        $this->photoFile = $photoFile;
 
         return $this;
     }

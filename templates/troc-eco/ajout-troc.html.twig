@@ -1,12 +1,10 @@
-{% extends 'parent.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
 
 
 
 {% block contenuPrincipal %}
-{{parent()}}
-
     <section>
         <div>
             <h1 class="text-center"> Ajouter un troc</h1>
@@ -19,9 +17,9 @@
                 </div>
 
                 <div class="column">
-                    <h2 class="type">Type de troc</h2>
+                    <h2 class="type">Categorie</h2>
                     <div class="col">
-                        {{ form_row(Formulaire.type) }}
+                        
                     </div>
                     <h2 class="annonce">Annonce</h2>
                     <div class="col" id="some-custom-id">

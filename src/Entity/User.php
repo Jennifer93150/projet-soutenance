@@ -7,8 +7,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
+ * @ORM\Table(name="user")
+ * @UniqueEntity(fields="email")
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
 class User implements UserInterface
@@ -23,6 +26,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * NotBlank s'assure que la valeur n'est pas vide
      * @Assert\NotBlank(message="Vous devez renseigner un nom.")
      */
     private $nom;
@@ -30,6 +34,7 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * NotNull s'assure que la valeur n'est pas null
      * @Assert\NotNull(message="Vous devez renseigner un mot de passe")
      */
     private $password;
@@ -52,7 +57,7 @@ class User implements UserInterface
     private $ville;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=10)
      */
     private $telephone;
 

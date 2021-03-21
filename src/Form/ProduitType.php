@@ -2,14 +2,11 @@
 // src/Form/ArticleType.php
 namespace App\Form;
 
+use App\Entity\Categorie;
 use App\Entity\Produit;
-#use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -21,7 +18,7 @@ class ProduitType extends AbstractType
     {
         $builder
         
-            ->add('type', ChoiceType::class, [
+            /*->add('type', ChoiceType::class, [
                 'label' => 'Type',
                 'choices' => [
                      'J\'ajoute' => 'Ajout',
@@ -30,12 +27,14 @@ class ProduitType extends AbstractType
                  ],
                 'expanded' => true,
                 'multiple' => false
-        ])
+        ])*/
+            # SELECT CATEGORIES
+            ->add('nom', EntityType::class, [
+                'label' => "Choisissez une catégorie", 
+                'class' => Categorie::class, 
+                'choice_label' => 'nom',
+                'mapped' => false]) 
            
-            #->add('categorie', ChoiceType::class, ['label' => 'categorie','required' => true,]) 
-            /*->add('codepostal', IntegerType::class, ['label' => 'code postal','required' => true,]) */
-           /* ->add('ville', TextType::class, ['label' => 'ville','required' => true,])*/
-            #->add('telephone', IntegerType::class, ['label' => 'telephone', 'required' => true,])
             ->add('photo', FileType::class, ['label' => 'photo'])
 
             ->add('titre',TextType::class, ['label' => 'titre','required' => true,])

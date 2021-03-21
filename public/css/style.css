@@ -21,7 +21,7 @@
     width: 90%;
 }
 
-.logo-header{
+.logo{
     margin: 10px;
 }
 
@@ -43,6 +43,7 @@ main{
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: cover; /*par defaut:contain= payage ou portrait( applique img tt largeur du main sans tt couvrir), */
     padding: 35px/*1ER top bottom*/ 0/*2EME left right*/;
+    background-size:100%;
 
 }
 
@@ -91,3 +92,8 @@ h1{
 
 }
 
+/******* Affichage Catégorie Maison **********/
+
+.card-size{
+    background-color: #FFDAC3;
+}

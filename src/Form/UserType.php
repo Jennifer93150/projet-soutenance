@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
@@ -27,7 +28,7 @@ class UserType extends AbstractType
             ->add('password', TextType::class, ['label' => 'Mot de passe','required' => true,]) 
             ->add('cp', IntegerType::class, ['label' => 'Code postal'])
             ->add('ville', TextType::class, ['label' => 'Ville'])
-            ->add('telephone', IntegerType::class, ['label' => 'Téléphone'])
+            ->add('telephone', TelType::class, ['label' => 'Téléphone'])
             /* NE PAS OUBLIER LES ENTITY QUI Y SONT LIEES*/
             ->add('acceptation', RadioType::class, ['label' => 'J\'ai lu et accepté la Politique de confidentialité', 'required' => true,])
 

@@ -1,4 +1,4 @@
-{% extends 'parent.html.twig' %}
+{% extends 'base.html.twig' %}
 {# Page Accueil #}
 {% block contenuPrincipal %}
    
@@ -7,14 +7,13 @@
         <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
         IS_AUTHENTICATED_FULLY => si réellement connecté-->
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-
+            
             <a class="" href="{{ path('profil') }}">
                 Bonjour {{ app.user.nom }}.
+                <!-- "app" : pr acceder a user, la variable est une instance de Symfony\Bridge\Twig\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
             </a>
 
-            <a class="" href="{{ path('profil') }}">
-                <i class="fas fa-user"></i>
-            </a>
+            
                         
         {% endif %}
     </section>

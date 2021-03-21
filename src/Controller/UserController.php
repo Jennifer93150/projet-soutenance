@@ -2,7 +2,7 @@
 // src/Controller/FormController.php
 namespace App\Controller;
 
-
+use App\Entity\Produit;
 use App\Entity\User;
 use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -48,13 +48,38 @@ class UserController extends AbstractController
         return $this->render('/user/inscription.html.twig', ['Formulaire' => $form->createView()]);
     }
 
-/***************************/   
+   
     # AFFICHAGE PROFIL
+
+    /**
+    * @Route("/profil", name="profil")
+    */
+    public function profil()
+    {
+        return $this->render('/user/profil.html.twig');
+    }
+
+
+    # Affichage les produits de user
+
+    /**
+    * @Route("/profil", name="profil")
+    */
+    public function produit_user()
+    {
+      
+        $repository = $this->getDoctrine()->getRepository(Produit::class);
+        $produits = $repository->findBy(['titre'=>'fer a repasser']);
+
+        return $this->render('/user/profil.html.twig', ['mesproduits'=>$produits]);
+    }
+
+
 
     /**
      * @Route("/profil", name="profil" )
      */
-    public function show(Request $request)
+    /*public function show(Request $request)
     {
        # Selection des données ds la bdd
         $repository = $this->getDoctrine()->getRepository(User::class);
@@ -63,7 +88,7 @@ class UserController extends AbstractController
     # Passer le formulaire à la vue
     return $this->render('/user/profil.html.twig', ['monprofil'=>$user]);
     
-    }
+    }*/
 
     
 

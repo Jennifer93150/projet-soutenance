@@ -2,12 +2,13 @@
 // src/Controller/FormController.php
 namespace App\Controller;
 
-
+use App\Entity\Categorie;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class NavbarController extends AbstractController
+class DefaultController extends AbstractController
 {
      
     
@@ -32,22 +33,22 @@ class NavbarController extends AbstractController
         return $this->render('/troc-eco/ajout-troc.html.twig');
     }
 
-    /**
-    * @Route("/recherche", name="recherche")
-    */
-    public function recherche()
-    {
-    
-        return $this->render('/troc-eco/recherche.html.twig');
-    }
+    # Affichage des categories dans page Recherche
 
     /**
-    * @Route("/categories", name="categories")
+     * Page categorie : Affiche les catégories des produits
+    * @Route("/recherche", name="recherche")
     */
-    public function categories()
+    public function recherche(Request $request)
     {
-    
-        return $this->render('/troc-eco/categories.html.twig');
+        # Selection des données ds la bdd
+        $repository = $this->getDoctrine()->getRepository(Categorie::class);
+        # je stock ds la var $cateegories TOUTES mes categories
+        $categories = $repository->findAll();
+
+        # Envoi à la vue
+        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categories]);
+        
     }
 
     /**
@@ -57,16 +58,6 @@ class NavbarController extends AbstractController
     {
     
         return $this->render('/troc-eco/annonces.html.twig');
-    }
-
-
-    /**
-    * @Route("/profil", name="profil")
-    */
-    public function profil()
-    {
-    
-        return $this->render('/user/profil.html.twig');
     }
 
     /**

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Nos catégories{% endblock %}
+
+{% block contenuPrincipal %}
+
+<div>
+    <h1 class="text-center">Catégorie Vêtement</h1>
+</div>
+<div>
+    <ul>
+    {% for produit in produits %}
+        <div class="card mb-3 card-size" style="max-width: 1120px;">
+            <div class="row g-0">
+                <div class="col-md-4 image">
+                <img src="{{ asset('img/' ~ produit.photo) }}" class="img-thumbnail" alt=""/>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body background-maison">
+                    <!-- {{ nom de la 1 ere var du for.nom }} -->
+                        <h5 class="card-title">{{ produit.nom }}</h5>
+                        <p class="card-text"></p>
+                        <p class="card-text"><small class="text-muted">{{ app.user.telephone }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

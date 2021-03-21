@@ -1,0 +1,46 @@
+<header class="bg-header">
+    <!-- BLOC HEADER -->
+        {% block header %}
+            <!-- BARRE DE NAVIGATION -->
+            <div class="container header">
+                <div class="logo-header">
+                    <a href="{{ path('accueil') }}">
+                        <img src="../img/logo.png" alt="logo" width="50" height="50">
+                    </a>
+                </div>
+
+                <nav class="nav">
+                    
+                    <a href="{{ path('accueil') }}">Comment je fais ?</a>   
+                    <a href="{{ path('recherche') }}">Je recherche</a>
+
+                    <!-- Si connecté affiche dans la navbar "j'ajoute troc", "profil","message"-->
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+                        <a href="{{ path('ajout') }}">J'ajoute un troc</a>
+                        <a href="{{ path('profil') }}">Mon profil</a>
+                        <a href="{{ path('message') }}">Mes messages</a>
+
+                        <!-- Si role admin alors affiche btn Gestion -->
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <a class="nav-link button" href="#">Gestion</a>
+                        {% endif %}
+                        <!-- Fin condition btn Gestion -->
+
+                        <button class="btn" type="button">
+                            <a class="nav-link button" href="{{ path('app_logout') }}">Me déconnecter</a>
+                        </button>
+
+                    <!-- sinon (pas connecté) affiche "Se connecter" -->        
+                    {% else %}
+                        <button class="btn" type="button">
+                             <a href="{{ path('app_login') }}">Se connecter</a>
+                        </button>
+                    {% endif %}
+                    <!-- Fin condition-->
+                        
+                </nav>
+
+            </div>
+        {% endblock %}
+</header>
