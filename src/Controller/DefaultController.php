@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Categorie;
+use App\Repository\CategorieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -33,21 +34,21 @@ class DefaultController extends AbstractController
         return $this->render('/troc-eco/ajout-troc.html.twig');
     }
 
-    # Affichage des categories dans page Recherche
+    # Affichage les categories dans page Recherche
 
     /**
-     * Page categorie : Affiche les catégories des produits
     * @Route("/recherche", name="recherche")
     */
-    public function recherche(Request $request)
+    public function recherche(Request $request, CategorieRepository $categorieRepository)
     {
-        # Selection des données ds la bdd
+        /*# Selection des données ds la bdd
         $repository = $this->getDoctrine()->getRepository(Categorie::class);
         # je stock ds la var $cateegories TOUTES mes categories
         $categories = $repository->findAll();
-
         # Envoi à la vue
-        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categories]);
+        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categories]);*/
+
+        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categorieRepository->findAll()]);
         
     }
 

@@ -13,6 +13,7 @@
                     
                     <a href="{{ path('accueil') }}">Comment je fais ?</a>   
                     <a href="{{ path('recherche') }}">Je recherche</a>
+                    
 
                     <!-- Si connecté affiche dans la navbar "j'ajoute troc", "profil","message"-->
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -31,11 +32,13 @@
                             <a class="nav-link button" href="{{ path('app_logout') }}">Me déconnecter</a>
                         </button>
 
-                    <!-- sinon (pas connecté) affiche "Se connecter" -->        
+                    <!-- sinon (pas connecté) affiche "Se connecter" et "Je m'inscris" -->        
                     {% else %}
+                        <a href="{{ path('inscription') }}">Je m'inscris</a>
                         <button class="btn" type="button">
                              <a href="{{ path('app_login') }}">Se connecter</a>
                         </button>
+
                     {% endif %}
                     <!-- Fin condition-->
                         

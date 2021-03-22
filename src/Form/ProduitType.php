@@ -29,11 +29,10 @@ class ProduitType extends AbstractType
                 'multiple' => false
         ])*/
             # SELECT CATEGORIES
-            ->add('nom', EntityType::class, [
-                'label' => "Choisissez une catégorie", 
+            ->add('categorie', EntityType::class, [
                 'class' => Categorie::class, 
                 'choice_label' => 'nom',
-                'mapped' => false]) 
+                'required' => true,]) 
            
             ->add('photo', FileType::class, ['label' => 'photo'])
 
