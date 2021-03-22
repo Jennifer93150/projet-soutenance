@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* troc-eco/recherche.html.twig */
+/* /troc-eco/recherche.html.twig */
 class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f54f00f extends \Twig\Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/recherche.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/recherche.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/recherche.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/recherche.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "troc-eco/recherche.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/recherche.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -99,7 +99,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 14
             echo "
-                    <div class=\"card col-lg-5 m-1\">
+                    <div class=\"card col-lg-5 m-1 rounded\">
                         <div class=\"card-body\">
                             <h2 class=\"card-title text-center\">";
             // line 17
@@ -110,7 +110,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                         <div class=\"text-center\">
                             <a href=\"";
             // line 21
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vetement");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Vetements");
             echo "\" class=\"align-self-center justify-self-center\">
                                 <img src=\"";
             // line 22
@@ -142,7 +142,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
     public function getTemplateName()
     {
-        return "troc-eco/recherche.html.twig";
+        return "/troc-eco/recherche.html.twig";
     }
 
     public function isTraitable()
@@ -171,13 +171,13 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
             <!-- on boucle que sur le titre -->
             {% for categorie in noscategories %}
 
-                    <div class=\"card col-lg-5 m-1\">
+                    <div class=\"card col-lg-5 m-1 rounded\">
                         <div class=\"card-body\">
                             <h2 class=\"card-title text-center\">{{ categorie.nom }}</h2>
                             
                         </div>
                         <div class=\"text-center\">
-                            <a href=\"{{ path('vetement')}}\" class=\"align-self-center justify-self-center\">
+                            <a href=\"{{ path('Vetements')}}\" class=\"align-self-center justify-self-center\">
                                 <img src=\"{{ asset('img/fer-a-repasser.png')}}\" class=\"card-img-bottom\" alt=\"...\">
                             </a>  
                         </div>
@@ -189,6 +189,6 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
     </div>
 </div>
         
-{% endblock %}", "troc-eco/recherche.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/recherche.html.twig");
+{% endblock %}", "/troc-eco/recherche.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/recherche.html.twig");
     }
 }

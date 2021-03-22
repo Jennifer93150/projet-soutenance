@@ -73,7 +73,7 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
             <h1 class=\"text-center\"> Ajouter un troc</h1>
         </div>
 
-        <div class=\"bg-vert\">
+        <div class=\"bg-vert rounded\">
             ";
         // line 14
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 14, $this->source); })()), 'form_start');
@@ -162,7 +162,7 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
             <h1 class=\"text-center\"> Ajouter un troc</h1>
         </div>
 
-        <div class=\"bg-vert\">
+        <div class=\"bg-vert rounded\">
             {{ form_start(Formulaire) }}
                 <div class=\"my-custom-class-for-errors\">
                     {{ form_errors(Formulaire) }}

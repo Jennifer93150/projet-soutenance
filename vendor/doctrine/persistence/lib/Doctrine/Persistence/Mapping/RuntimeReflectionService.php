@@ -2,13 +2,12 @@
 
 namespace Doctrine\Persistence\Mapping;
 
-use Doctrine\Persistence\Reflection\RuntimePublicReflectionProperty;
-use Doctrine\Persistence\Reflection\TypedNoDefaultReflectionProperty;
+use Doctrine\Common\Reflection\RuntimePublicReflectionProperty;
+use Doctrine\Common\Reflection\TypedNoDefaultReflectionProperty;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionMethod;
 use ReflectionProperty;
-
 use function array_key_exists;
 use function class_exists;
 use function class_parents;
@@ -100,3 +99,5 @@ class RuntimeReflectionService implements ReflectionService
         return $reflectionMethod->isPublic();
     }
 }
+
+class_exists(\Doctrine\Common\Persistence\Mapping\RuntimeReflectionService::class);

@@ -41,12 +41,12 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants/nav.html.twig"));
 
         // line 1
-        echo "<header class=\"bg-header\">
+        echo "<header class=\"\">
     <!-- BLOC HEADER -->
         ";
         // line 3
         $this->displayBlock('header', $context, $blocks);
-        // line 49
+        // line 51
         echo "</header>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -68,82 +68,84 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
         // line 4
         echo "            <!-- BARRE DE NAVIGATION -->
-            <div class=\"container header\">
-                <div class=\"logo-header\">
+            <div class=\"container-fluid header\">
+                <div>
                     <a href=\"";
         // line 7
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">
-                        <img src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
+                        <img  class=\"logo\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
                     </a>
                 </div>
+                
 
                 <nav class=\"nav\">
+                   
                     
                     <a href=\"";
-        // line 14
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Comment je fais ?</a>   
                     <a href=\"";
-        // line 15
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
         echo "\">Je recherche</a>
                     
 
                     <!-- Si connecté affiche dans la navbar \"j'ajoute troc\", \"profil\",\"message\"-->
                     ";
-        // line 19
+        // line 21
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 20
+            // line 22
             echo "
                         <a href=\"";
-            // line 21
+            // line 23
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout");
             echo "\">J'ajoute un troc</a>
                         <a href=\"";
-            // line 22
+            // line 24
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
             echo "\">Mon profil</a>
                         <a href=\"";
-            // line 23
+            // line 25
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message");
             echo "\">Mes messages</a>
 
                         <!-- Si role admin alors affiche btn Gestion -->
                         ";
-            // line 26
+            // line 28
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 27
+                // line 29
                 echo "                            <a class=\"nav-link button\" href=\"#\">Gestion</a>
                         ";
             }
-            // line 29
+            // line 31
             echo "                        <!-- Fin condition btn Gestion -->
 
-                        <button class=\"btn\" type=\"button\">
-                            <a class=\"nav-link button\" href=\"";
-            // line 32
+                        
+                        <a class=\"nav-link button\" href=\"";
+            // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Me déconnecter</a>
-                        </button>
+            echo "\">Je me déconnecte</a>
+                        
 
                     <!-- sinon (pas connecté) affiche \"Se connecter\" et \"Je m'inscris\" -->        
                     ";
         } else {
-            // line 37
+            // line 39
             echo "                        <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
             echo "\">Je m'inscris</a>
-                        <button class=\"btn\" type=\"button\">
-                             <a href=\"";
-            // line 39
+                        
+                        <a href=\"";
+            // line 41
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\">Se connecter</a>
-                        </button>
+            echo "\">Je me connecte</a>
+                       
 
                     ";
         }
-        // line 43
+        // line 45
         echo "                    <!-- Fin condition-->
                         
                 </nav>
@@ -165,23 +167,25 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
     public function getDebugInfo()
     {
-        return array (  147 => 43,  140 => 39,  134 => 37,  126 => 32,  121 => 29,  117 => 27,  115 => 26,  109 => 23,  105 => 22,  101 => 21,  98 => 20,  96 => 19,  89 => 15,  85 => 14,  75 => 7,  70 => 4,  60 => 3,  50 => 49,  48 => 3,  44 => 1,);
+        return array (  149 => 45,  142 => 41,  136 => 39,  128 => 34,  123 => 31,  119 => 29,  117 => 28,  111 => 25,  107 => 24,  103 => 23,  100 => 22,  98 => 21,  91 => 17,  87 => 16,  75 => 7,  70 => 4,  60 => 3,  50 => 51,  48 => 3,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header class=\"bg-header\">
+        return new Source("<header class=\"\">
     <!-- BLOC HEADER -->
         {% block header %}
             <!-- BARRE DE NAVIGATION -->
-            <div class=\"container header\">
-                <div class=\"logo-header\">
+            <div class=\"container-fluid header\">
+                <div>
                     <a href=\"{{ path('accueil') }}\">
-                        <img src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
+                        <img  class=\"logo\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
                     </a>
                 </div>
+                
 
                 <nav class=\"nav\">
+                   
                     
                     <a href=\"{{ path('accueil') }}\">Comment je fais ?</a>   
                     <a href=\"{{ path('recherche') }}\">Je recherche</a>
@@ -200,16 +204,16 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
                         {% endif %}
                         <!-- Fin condition btn Gestion -->
 
-                        <button class=\"btn\" type=\"button\">
-                            <a class=\"nav-link button\" href=\"{{ path('app_logout') }}\">Me déconnecter</a>
-                        </button>
+                        
+                        <a class=\"nav-link button\" href=\"{{ path('app_logout') }}\">Je me déconnecte</a>
+                        
 
                     <!-- sinon (pas connecté) affiche \"Se connecter\" et \"Je m'inscris\" -->        
                     {% else %}
                         <a href=\"{{ path('inscription') }}\">Je m'inscris</a>
-                        <button class=\"btn\" type=\"button\">
-                             <a href=\"{{ path('app_login') }}\">Se connecter</a>
-                        </button>
+                        
+                        <a href=\"{{ path('app_login') }}\">Je me connecte</a>
+                       
 
                     {% endif %}
                     <!-- Fin condition-->

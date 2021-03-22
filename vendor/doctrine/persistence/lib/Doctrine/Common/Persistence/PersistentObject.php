@@ -6,11 +6,9 @@ use BadMethodCallException;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\Mapping\ClassMetadata;
-use Doctrine\Persistence\ObjectManager;
-use Doctrine\Persistence\ObjectManagerAware;
 use InvalidArgumentException;
 use RuntimeException;
-
+use function class_exists;
 use function lcfirst;
 use function substr;
 
@@ -109,7 +107,6 @@ abstract class PersistentObject implements ObjectManagerAware
             if (! ($args[0] instanceof $targetClass) && $args[0] !== null) {
                 throw new InvalidArgumentException("Expected persistent object of type '" . $targetClass . "'");
             }
-
             $this->$field = $args[0];
             $this->completeOwningSide($field, $targetClass, $args[0]);
         } else {
@@ -180,11 +177,9 @@ abstract class PersistentObject implements ObjectManagerAware
         if (! ($args[0] instanceof $targetClass)) {
             throw new InvalidArgumentException("Expected persistent object of type '" . $targetClass . "'");
         }
-
         if (! ($this->$field instanceof Collection)) {
             $this->$field = new ArrayCollection($this->$field ?: []);
         }
-
         $this->$field->add($args[0]);
         $this->completeOwningSide($field, $targetClass, $args[0]);
     }
@@ -236,3 +231,5 @@ abstract class PersistentObject implements ObjectManagerAware
         }
     }
 }
+
+class_exists(\Doctrine\Common\Persistence\PersistentObject::class);

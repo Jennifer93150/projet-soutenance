@@ -2,20 +2,68 @@
 {# Page Accueil #}
 {% block contenuPrincipal %}
    
-    <section class="bg-principal">
-
-        <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
-        IS_AUTHENTICATED_FULLY => si réellement connecté-->
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    
+        <section class="">
+      
+            <div>
+                <h1 class="text-center ">Comment je fais ?</h1>
+            </div>
             
-            <a class="" href="{{ path('profil') }}">
-                Bonjour {{ app.user.nom }}.
-                <!-- "app" : pr acceder a user, la variable est une instance de Symfony\Bridge\Twig\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
-            </a>
 
-            
+            <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
+            IS_AUTHENTICATED_FULLY => si réellement connecté-->
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div class="text-end">
+                <a class="lien-profil" href="{{ path('profil') }}">
+                    Bonjour {{ app.user.nom }}.
+                    <!-- "app" : pr acceder a user, la variable est une instance de Symfony\Bridge\Twig\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
+                </a>     
+            </div>  
                         
-        {% endif %}
-    </section>
+            {% endif %}
+        
+           
+                <article class="col">
+                    <h2 class="h2-accueil mb-5 ml-5">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
+                    <div class="container">
+                        <div class="row">
+                            
+                                <img class="robe col-4" src="{{ asset('img/robe.png')}}" alt="Robe bleu">
+                                <img class="fleche col-4" src="{{ asset('img/fleche.png')}}" alt="fleche echange">
+                                <img class="livres col-4" src="{{ asset('img/livres.png')}}" alt="livres">
+                            
+                            
+                        </div>
+                        <p class="figcaption text-center mt-3">Echangez un de vos objet contre un autre objet</p>
+                    </div>
+                </article>
+
+        </section>
+        <section>
+            <div>
+                <article>
+                    <h2>
+                    </h2>
+                    <p>
+                    </p>
+                </article>
+
+            </div>
+        
+        </section>
+        <section>
+            <div>
+                <article>
+                    <h2>
+                    </h2>
+                    <p>
+                    </p>
+                </article>
+
+            </div>
+        
+        </section>
+        
+    
 
 {% endblock %}

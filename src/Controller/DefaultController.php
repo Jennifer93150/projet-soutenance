@@ -1,5 +1,5 @@
 <?php
-// src/Controller/FormController.php
+// src/Controller/DefaultController.php
 namespace App\Controller;
 
 use App\Entity\Categorie;
@@ -39,7 +39,7 @@ class DefaultController extends AbstractController
     /**
     * @Route("/recherche", name="recherche")
     */
-    public function recherche(Request $request, CategorieRepository $categorieRepository)
+    public function recherche(CategorieRepository $categorieRepository)
     {
         /*# Selection des données ds la bdd
         $repository = $this->getDoctrine()->getRepository(Categorie::class);

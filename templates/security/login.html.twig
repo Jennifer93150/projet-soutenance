@@ -5,7 +5,7 @@
 {% block contenuPrincipal %}
 {{parent()}}
 
-    <div><h1 class="text-center">Connexion</h1></div>
+    <div><h1 class="text-center">En avant pour troquer !</h1></div>
      <!-- Formualaire -->
     <form method="post">
     <!-- Message erreur -->
@@ -13,7 +13,7 @@
             <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
-        {% if app.user %}
+        {% if app.user.nom %}
             <div class="mb-3">
                 Vous êtes déjà connecté en tant que {{ app.user.nom }}, 
             </div>

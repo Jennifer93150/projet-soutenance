@@ -56,42 +56,42 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 15
+        // line 33
         echo "        
     </head>
     <!-- PARTIE BODY -->
     <body>
         ";
-        // line 19
-        $this->loadTemplate("composants/nav.html.twig", "base.html.twig", 19)->display($context);
-        // line 20
+        // line 37
+        $this->loadTemplate("composants/nav.html.twig", "base.html.twig", 37)->display($context);
+        // line 38
         echo "         <!--   MAIN     -->
         <main>
             <div class=\"container-fluid\">
                 <div class=\"row\">
                     <div class=\"col\">
                         ";
-        // line 25
+        // line 43
         $this->displayBlock('contenuPrincipal', $context, $blocks);
-        // line 26
+        // line 44
         echo "                    </div> <!-- /.col -->
                 </div> <!-- /.row -->
-            </div> <!-- /.container-fluid -->
+            </div> <!-- /.container -->
             
         </main>
         ";
-        // line 31
-        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 31)->display($context);
-        // line 32
+        // line 49
+        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 49)->display($context);
+        // line 50
         echo "
         
         
 
         ";
-        // line 37
+        // line 55
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 50
+        // line 69
         echo "
     </body>
 </html>
@@ -135,17 +135,44 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 8
-        echo "            <!-- lien vers bootstrap-->
+        echo "            
+            <!-- lien vers bootstrap-->
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\"> 
+            <!-- IMPORT POLICE -->
+            <!-- OPEN SANS  -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- LATO -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- ANTON -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@900&family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- FONT AWESOME ICONS -->
+            <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css\" integrity=\"sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==\" crossorigin=\"anonymous\" />
+            <script src=\"https://kit.fontawesome.com/a3b3ad3be6.js\" crossorigin=\"anonymous\"></script>
             <!-- lien vers fichier css -->
             <link rel=\"stylesheet\" href=\"";
-        // line 11
+        // line 25
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/style.css"), "html", null, true);
-        echo "\" media=\"all\">
+        echo "\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/index.css"), "html", null, true);
+        echo "\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/form.css"), "html", null, true);
+        echo "\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/maison.css"), "html", null, true);
+        echo "\" media=\"all\"/>
+            <!-- icone barre navigation -->
             <link href=\"";
-        // line 12
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo1.png"), "html", null, true);
-        echo "\" rel=\"icon\" type=\"image/x-icon\" /> <!-- page icon -->
+        echo "\" rel=\"icon\" type=\"image/x-icon\"/> 
             
         ";
         
@@ -156,7 +183,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     }
 
-    // line 25
+    // line 43
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -174,7 +201,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     }
 
-    // line 37
+    // line 55
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -184,13 +211,14 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 38
+        // line 56
         echo "
-
+             
             <!-- JavaScript Bundle with Popper -->
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js\" integrity=\"sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==\" crossorigin=\"anonymous\"></script>
-            <!-- JavaScript Textilate -->
+
+            <!--JavaScript Textilate -->
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js\"></script>
@@ -217,7 +245,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     public function getDebugInfo()
     {
-        return array (  188 => 38,  178 => 37,  160 => 25,  147 => 12,  143 => 11,  138 => 8,  128 => 7,  109 => 5,  95 => 50,  92 => 37,  86 => 32,  84 => 31,  77 => 26,  75 => 25,  68 => 20,  66 => 19,  60 => 15,  58 => 7,  53 => 5,  47 => 1,);
+        return array (  215 => 56,  205 => 55,  187 => 43,  174 => 30,  169 => 28,  165 => 27,  161 => 26,  157 => 25,  138 => 8,  128 => 7,  109 => 5,  95 => 69,  92 => 55,  86 => 50,  84 => 49,  77 => 44,  75 => 43,  68 => 38,  66 => 37,  60 => 33,  58 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -229,11 +257,29 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         <title>{% block title %}Troc'Eco{% endblock %}</title>
 
         {% block stylesheets %}
+            
             <!-- lien vers bootstrap-->
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl\" crossorigin=\"anonymous\"> 
+            <!-- IMPORT POLICE -->
+            <!-- OPEN SANS  -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- LATO -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- ANTON -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@900&family=Open+Sans:wght@800&display=swap\" rel=\"stylesheet\">
+            <!-- FONT AWESOME ICONS -->
+            <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css\" integrity=\"sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==\" crossorigin=\"anonymous\" />
+            <script src=\"https://kit.fontawesome.com/a3b3ad3be6.js\" crossorigin=\"anonymous\"></script>
             <!-- lien vers fichier css -->
-            <link rel=\"stylesheet\" href=\"{{asset('../css/style.css') }}\" media=\"all\">
-            <link href=\"{{ asset('img/logo1.png') }}\" rel=\"icon\" type=\"image/x-icon\" /> <!-- page icon -->
+            <link rel=\"stylesheet\" href=\"{{asset('../css/style.css') }}\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"{{asset('../css/index.css') }}\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"{{asset('../css/form.css') }}\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"{{asset('../css/maison.css') }}\" media=\"all\"/>
+            <!-- icone barre navigation -->
+            <link href=\"{{ asset('img/logo1.png') }}\" rel=\"icon\" type=\"image/x-icon\"/> 
             
         {% endblock %}
         
@@ -249,7 +295,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
                         {% block contenuPrincipal %}{% endblock %}
                     </div> <!-- /.col -->
                 </div> <!-- /.row -->
-            </div> <!-- /.container-fluid -->
+            </div> <!-- /.container -->
             
         </main>
         {% include 'composants/footer.html.twig' %}
@@ -260,11 +306,12 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         {#BLOC JAVASCRIPT#}
         {% block javascripts %}
 
-
+             
             <!-- JavaScript Bundle with Popper -->
             <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js\" integrity=\"sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==\" crossorigin=\"anonymous\"></script>
-            <!-- JavaScript Textilate -->
+
+            <!--JavaScript Textilate -->
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js\"></script>

@@ -1,15 +1,17 @@
-<header class="bg-header">
+<header class="">
     <!-- BLOC HEADER -->
         {% block header %}
             <!-- BARRE DE NAVIGATION -->
-            <div class="container header">
-                <div class="logo-header">
+            <div class="container-fluid header">
+                <div>
                     <a href="{{ path('accueil') }}">
-                        <img src="../img/logo.png" alt="logo" width="50" height="50">
+                        <img  class="logo" src="../img/logo.png" alt="logo" width="50" height="50">
                     </a>
                 </div>
+                
 
                 <nav class="nav">
+                   
                     
                     <a href="{{ path('accueil') }}">Comment je fais ?</a>   
                     <a href="{{ path('recherche') }}">Je recherche</a>
@@ -28,16 +30,16 @@
                         {% endif %}
                         <!-- Fin condition btn Gestion -->
 
-                        <button class="btn" type="button">
-                            <a class="nav-link button" href="{{ path('app_logout') }}">Me déconnecter</a>
-                        </button>
+                        
+                        <a class="nav-link button" href="{{ path('app_logout') }}">Je me déconnecte</a>
+                        
 
                     <!-- sinon (pas connecté) affiche "Se connecter" et "Je m'inscris" -->        
                     {% else %}
                         <a href="{{ path('inscription') }}">Je m'inscris</a>
-                        <button class="btn" type="button">
-                             <a href="{{ path('app_login') }}">Se connecter</a>
-                        </button>
+                        
+                        <a href="{{ path('app_login') }}">Je me connecte</a>
+                       
 
                     {% endif %}
                     <!-- Fin condition-->

@@ -7,8 +7,12 @@ use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\File\File;
+
 
 
 
@@ -17,7 +21,7 @@ class ProduitController extends AbstractController
     # Fonction ajout nouveau produit
 
     /**
-     * @Route("/ajouter", name="ajout")
+     * @Route("/ajouter", name="ajout", methods={"GET","POST"})
      */
     public function new(Request $request)
     {
@@ -30,7 +34,35 @@ class ProduitController extends AbstractController
 
         # Si "submit" ET tout valide
         if ($form->isSubmitted() && $form->isValid()) {
-            
+           /** @var UploadedFile $brochureFile */
+           $brochureFile = $form->get('photo')->getData();
+
+           # cette condition est nécessaire car le champ 'brochure' n'est pas obligatoire
+           # donc le fichier PDF ne doit être traité que lorsqu'un fichier est téléchargé
+           if ($brochureFile) {
+               $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+               # cela est nécessaire pour inclure en toute sécurité le nom du fichier dans l'URL
+               #$safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+               $newFilename = $originalFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
+
+               // Move the file to the directory where brochures are stored
+               try {
+                   $brochureFile->move(
+                       $this->getParameter('brochures_directory'),
+                       $newFilename
+                   );
+               } catch (FileException $e) {
+                   // ... handle exception if something happens during file upload
+               }
+
+               // updates the 'brochureFilename' property to store the PDF file name
+               // instead of its contents
+               $produit->setPhoto($newFilename);
+               $produit->setPhoto(new File($this->getParameter('brochures_directory').'/'.$produit->getPhoto())
+            );
+           }
+
+        # le code dessous c ajouter user_id a la table des que user entre un produit  
         # $produit.user=$session.getUser
         # possibilité de modifier le contenu du formulaire ici
 
@@ -38,7 +70,12 @@ class ProduitController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
+
+            return $this->redirectToRoute('accueil');
         }
+
+        
+
         # Passer le formulaire à la vue
         return $this->render('/troc-eco/ajout-troc.html.twig', ['Formulaire' => $form->createView()]);
     }
@@ -57,7 +94,7 @@ class ProduitController extends AbstractController
     # Affichage categorie JARDIN
 
     /**
-     * @Route("/categorie/jardin", name="jardin" )
+     * @Route("/categorie/jardin", name="Jardin" )
      */
     public function jardin(ProduitRepository $produitRepository)
     {
@@ -67,7 +104,7 @@ class ProduitController extends AbstractController
      # Affichage categorie MAISON
 
     /**
-     * @Route("/categorie/maison", name="maison" )
+     * @Route("/categorie/maison", name="Maison" )
      */
     public function maison(ProduitRepository $produitRepository)
     {
@@ -78,7 +115,7 @@ class ProduitController extends AbstractController
      # Affichage categorie PUERICULTURE
 
     /**
-     * @Route("/categorie/puericulture", name="puericulture" )
+     * @Route("/categorie/puericulture", name="Puericulture" )
      */
     public function puericulture(ProduitRepository $produitRepository)
     {
@@ -89,7 +126,7 @@ class ProduitController extends AbstractController
     # Affichage categorie MULTIMEDIA
 
     /**
-     * @Route("/categorie/multimedia", name="multimedia" )
+     * @Route("/categorie/multimedia", name="Multimedia" )
      */
     public function multimedia(ProduitRepository $produitRepository)
     {
@@ -100,7 +137,7 @@ class ProduitController extends AbstractController
     # Affichage categorie MULTIMEDIA
 
     /**
-     * @Route("/categorie/livre", name="livre" )
+     * @Route("/categorie/livre", name="Livre" )
      */
     public function livre(ProduitRepository $produitRepository)
     {
