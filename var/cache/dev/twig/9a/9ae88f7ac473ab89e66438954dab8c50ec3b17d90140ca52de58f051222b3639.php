@@ -41,7 +41,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants/nav.html.twig"));
 
         // line 1
-        echo "<header class=\"\">
+        echo "<header>
     <!-- BLOC HEADER -->
         ";
         // line 3
@@ -74,7 +74,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         // line 7
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">
-                        <img  class=\"logo\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
+                        <img  class=\"logo m-3\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
                     </a>
                 </div>
                 
@@ -116,14 +116,16 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
             // line 28
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                 // line 29
-                echo "                            <a class=\"nav-link button\" href=\"#\">Gestion</a>
+                echo "                            <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
+                echo "\">Gestion</a>
                         ";
             }
             // line 31
             echo "                        <!-- Fin condition btn Gestion -->
 
                         
-                        <a class=\"nav-link button\" href=\"";
+                        <a href=\"";
             // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Je me déconnecte</a>
@@ -167,19 +169,19 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
     public function getDebugInfo()
     {
-        return array (  149 => 45,  142 => 41,  136 => 39,  128 => 34,  123 => 31,  119 => 29,  117 => 28,  111 => 25,  107 => 24,  103 => 23,  100 => 22,  98 => 21,  91 => 17,  87 => 16,  75 => 7,  70 => 4,  60 => 3,  50 => 51,  48 => 3,  44 => 1,);
+        return array (  151 => 45,  144 => 41,  138 => 39,  130 => 34,  125 => 31,  119 => 29,  117 => 28,  111 => 25,  107 => 24,  103 => 23,  100 => 22,  98 => 21,  91 => 17,  87 => 16,  75 => 7,  70 => 4,  60 => 3,  50 => 51,  48 => 3,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header class=\"\">
+        return new Source("<header>
     <!-- BLOC HEADER -->
         {% block header %}
             <!-- BARRE DE NAVIGATION -->
             <div class=\"container-fluid header\">
                 <div>
                     <a href=\"{{ path('accueil') }}\">
-                        <img  class=\"logo\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
+                        <img  class=\"logo m-3\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
                     </a>
                 </div>
                 
@@ -200,12 +202,12 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
                         <!-- Si role admin alors affiche btn Gestion -->
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a class=\"nav-link button\" href=\"#\">Gestion</a>
+                            <a href=\"{{ path('gestion') }}\">Gestion</a>
                         {% endif %}
                         <!-- Fin condition btn Gestion -->
 
                         
-                        <a class=\"nav-link button\" href=\"{{ path('app_logout') }}\">Je me déconnecte</a>
+                        <a href=\"{{ path('app_logout') }}\">Je me déconnecte</a>
                         
 
                     <!-- sinon (pas connecté) affiche \"Se connecter\" et \"Je m'inscris\" -->        

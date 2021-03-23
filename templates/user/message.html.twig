@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{# PAGE CREATION DE COMPTE#}
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
+{% block title %}Troc'Eco | Mes messages{% endblock %}
+
+{# MAIN #}
+{% block contenuPrincipal %}
+{{parent()}}
+<section>
+    <div>
+        <h1 class="text-center">Mes messages</h1>
+    </div>
+    
+{# FORMULAIRE#}
+    <form method="post">
+        <div class="bg-vert">
+            
+            
+            
+            {{ form(Formulaire) }}
+            
+        </div>
+    </form>
+</section>
+
+{% endblock %}

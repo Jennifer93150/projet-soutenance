@@ -2,11 +2,10 @@
 // src/Controller/DefaultController.php
 namespace App\Controller;
 
-use App\Entity\Categorie;
 use App\Repository\CategorieRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 class DefaultController extends AbstractController
@@ -26,7 +25,10 @@ class DefaultController extends AbstractController
     }
 
     /**
+    * Nécessite juste d'être connecté
     * @Route("/ajout-troc", name="ajout")
+    * @IsGranted("IS_AUTHENTICATED_FULLY")
+    * fonctionne aussi avec ROLE_USER
     */
     public function ajout()
     {
@@ -63,6 +65,7 @@ class DefaultController extends AbstractController
 
     /**
     * @Route("/message", name="message")
+    * @IsGranted("IS_AUTHENTICATED_FULLY")
     */
     public function message()
     {

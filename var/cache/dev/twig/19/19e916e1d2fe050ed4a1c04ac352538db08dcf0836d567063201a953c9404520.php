@@ -88,7 +88,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
 
-    <div><h1 class=\"text-center\">Connexion</h1></div>
+    <div><h1 class=\"text-center\">En avant pour troquer !</h1></div>
      <!-- Formualaire -->
     <form method=\"post\">
     <!-- Message erreur -->
@@ -187,7 +187,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 {% block contenuPrincipal %}
 {{parent()}}
 
-    <div><h1 class=\"text-center\">Connexion</h1></div>
+    <div><h1 class=\"text-center\">En avant pour troquer !</h1></div>
      <!-- Formualaire -->
     <form method=\"post\">
     <!-- Message erreur -->

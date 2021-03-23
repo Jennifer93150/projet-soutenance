@@ -1,3 +1,10 @@
+/********** GENERAL **********/
+
+*
+{
+    box-sizing: border-box;
+}
+
 /******* Affichage Catégorie Maison **********/
 
 .card-size{

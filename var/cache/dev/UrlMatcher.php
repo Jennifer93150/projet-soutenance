@@ -16,19 +16,20 @@ return [
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\DefaultController::accueil'], null, null, null, false, false, null]],
         '/recherche' => [[['_route' => 'recherche', '_controller' => 'App\\Controller\\DefaultController::recherche'], null, null, null, false, false, null]],
         '/annonces' => [[['_route' => 'annonces', '_controller' => 'App\\Controller\\DefaultController::annonces'], null, null, null, false, false, null]],
-        '/message' => [[['_route' => 'message', '_controller' => 'App\\Controller\\DefaultController::message'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\DefaultController::contact'], null, null, null, false, false, null]],
         '/politique' => [[['_route' => 'politique', '_controller' => 'App\\Controller\\DefaultController::politique'], null, null, null, false, false, null]],
+        '/gestion' => [[['_route' => 'gestion', '_controller' => 'App\\Controller\\GestionController::create'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/message' => [[['_route' => 'message', '_controller' => 'App\\Controller\\MessageController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/ajouter' => [[['_route' => 'ajout', '_controller' => 'App\\Controller\\ProduitController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/categorie/vetement' => [[['_route' => 'Vetements', '_controller' => 'App\\Controller\\ProduitController::vetement'], null, null, null, false, false, null]],
-        '/categorie/jardin' => [[['_route' => 'Jardin', '_controller' => 'App\\Controller\\ProduitController::jardin'], null, null, null, false, false, null]],
-        '/categorie/maison' => [[['_route' => 'Maison', '_controller' => 'App\\Controller\\ProduitController::maison'], null, null, null, false, false, null]],
-        '/categorie/puericulture' => [[['_route' => 'Puericulture', '_controller' => 'App\\Controller\\ProduitController::puericulture'], null, null, null, false, false, null]],
-        '/categorie/multimedia' => [[['_route' => 'Multimedia', '_controller' => 'App\\Controller\\ProduitController::multimedia'], null, null, null, false, false, null]],
-        '/categorie/livre' => [[['_route' => 'Livre', '_controller' => 'App\\Controller\\ProduitController::livre'], null, null, null, false, false, null]],
+        '/categorie/vetement' => [[['_route' => 'Vetements', '_controller' => 'App\\Controller\\ProduitController::vetement'], null, ['GET' => 0], null, false, false, null]],
+        '/categorie/jardin' => [[['_route' => 'Jardin', '_controller' => 'App\\Controller\\ProduitController::jardin'], null, ['GET' => 0], null, false, false, null]],
+        '/categorie/maison' => [[['_route' => 'Maison', '_controller' => 'App\\Controller\\ProduitController::maison'], null, ['GET' => 0], null, false, false, null]],
+        '/categorie/puericulture' => [[['_route' => 'Puericulture', '_controller' => 'App\\Controller\\ProduitController::puericulture'], null, ['GET' => 0], null, false, false, null]],
+        '/categorie/multimedia' => [[['_route' => 'Multimedia', '_controller' => 'App\\Controller\\ProduitController::multimedia'], null, ['GET' => 0], null, false, false, null]],
+        '/categorie/livre' => [[['_route' => 'Livre', '_controller' => 'App\\Controller\\ProduitController::livre'], null, ['GET' => 0], null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
-        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\UserController::create'], null, null, null, false, false, null]],
+        '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/profil' => [[['_route' => 'profil', '_controller' => 'App\\Controller\\UserController::produit_user'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -48,6 +49,8 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/edit/(\\d+)(*:180)'
+                .'|/delete/(\\d+)(*:201)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -57,8 +60,10 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        180 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], null, null, false, true, null]],
+        201 => [
+            [['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -114,8 +114,10 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
             echo "\" class=\"align-self-center justify-self-center\">
                                 <img src=\"";
             // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/fer-a-repasser.png"), "html", null, true);
-            echo "\" class=\"card-img-bottom\" alt=\"...\">
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("img/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 22))), "html", null, true);
+            echo "\" class=\"card-img-bottom\" alt=\"photo-";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            echo "\">
                             </a>  
                         </div>
                         
@@ -152,7 +154,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
     public function getDebugInfo()
     {
-        return array (  129 => 28,  117 => 22,  113 => 21,  106 => 17,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  131 => 28,  117 => 22,  113 => 21,  106 => 17,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -178,7 +180,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                         </div>
                         <div class=\"text-center\">
                             <a href=\"{{ path('Vetements')}}\" class=\"align-self-center justify-self-center\">
-                                <img src=\"{{ asset('img/fer-a-repasser.png')}}\" class=\"card-img-bottom\" alt=\"...\">
+                                <img src=\"{{ asset('img/' ~ categorie.photo) }}\" class=\"card-img-bottom\" alt=\"photo-{{ categorie.nom }}\">
                             </a>  
                         </div>
                         

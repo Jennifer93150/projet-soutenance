@@ -3,32 +3,30 @@
 {% block contenuPrincipal %}
 {{parent()}}
 
-    <section>
+    <section class="">
         <div >
-            <h1 class="text-center">Mon profil</h1>
+            <h1 class="text-center my-5 py-3">Mon profil</h1>
         </div>
-        <div class="bg-vert">
-            <div class="card mb-3" style="max-width: 540px;">
+        <div class="container bg-vert rounded">
+            <div class=" mb-3">
                 <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/profil.png')}}" alt="img-profil">
+                    <div class="col-md-6">
+                        <img class="rounded shadow-lg" src="{{ asset('img/profil.png')}}" alt="img-profil">
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ app.user.nom }}</h5>
-                            <p class="card-text">{{ app.user.email }}</p>
-                            <p class="card-text">{{ app.user.ville }}</p>
-                            <p class="card-text"><small class="text-muted">{{ app.user.cp }}</small>
-                            </p>
-                            <p class="card-text">{{ app.user.telephone }}</p>
-                           
-                        </div>
+                    <div class="col-md-6 p-5">
+                        
+                            <h2 class="text-capitalize">Coucou {{ app.user.nom }}</h2>
+                            <p class="">Email : {{ app.user.email }}</p>
+                            <p class="text-capitalize">Ville : {{ app.user.ville }}</p>
+                            <p class="">Code postal :{{ app.user.cp }}</p>
+                            <p class="">Tel : 0{{ app.user.telephone }}</p>
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="my-5">
                 <h2>A propos de moi</h2>
                 <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
+                <a href="{{ path('modifier-profil')}}">Modifier mon profil</a>
             </div>
             <div>
                 <h2>Mes trocs</h2>
@@ -36,16 +34,16 @@
                 
                 -->
                 {% for produit in mesproduits %}
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="mb-3">
                     <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{ asset('img/fer-a-repasser.png')}}" alt="img-profil">
+                        <div class="col-md-6">
+                            <img src="{{ asset('uploads/brochures/' ~ produit.photo)}}" alt="image produit du profil">
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ produit.titre }}</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="col-md-6 p-5">
+                            <div class="">
+                                <h2 class="text-capitalize">{{ produit.titre }}</h2>
+                                <p class="">{{ produit.description }}</p>
+                                <p class=""><small class="text-muted">{{ produit.date }}</small>
                                 </p>
                             </div>
                         </div>

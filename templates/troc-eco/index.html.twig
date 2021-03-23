@@ -1,15 +1,20 @@
 {% extends 'base.html.twig' %}
 {# Page Accueil #}
+
+{% block title %}Troc'Eco | Accueil{% endblock %}
+
+
 {% block contenuPrincipal %}
+    {% block titre %}
+        
+        <div class="titre">
+            <h1 class="text-center ">Comment je fais ?</h1>
+        </div>
+    {% endblock %}
    
     
         <section class="">
-      
-            <div>
-                <h1 class="text-center ">Comment je fais ?</h1>
-            </div>
-            
-
+        
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
             IS_AUTHENTICATED_FULLY => si réellement connecté-->
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}

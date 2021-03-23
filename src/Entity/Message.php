@@ -26,19 +26,32 @@ class Message
     //JE LIE mon message A user
     /**
      * Les messages sont liées à un user
-     * @ORM\ManyToOne(targetEntity="App\Entity\Message", inversedBy="users")
-     * @ORM\JoinColumn(name="user1_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="messages")
+     * @ORM\JoinColumn(name="emetteur_id", referencedColumnName="id")
      */
-    private $user1;
+    private $emetteur;
 
 
     //JE LIE mon message A user
     /**
      * Les messages sont liées à un user
-     * @ORM\ManyToOne(targetEntity="App\Entity\Message", inversedBy="users")
-     * @ORM\JoinColumn(name="user2_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="messages")
+     * @ORM\JoinColumn(name="destinataire_id", referencedColumnName="id")
      */
-    private $user2;
+    private $destinataire;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+ 
+ 
+    public function __construct()
+    {
+        $this->date = new \dateTime('now');
+    }
 
 
 
@@ -59,42 +72,68 @@ class Message
         return $this;
     }
 
+    
+
     /**
-     * Get the value of user1
+     * Get les messages sont liées à un user
      */ 
-    public function getUser1()
+    public function getEmetteur()
     {
-        return $this->user1;
+        return $this->emetteur;
     }
 
     /**
-     * Set the value of user1
+     * Set les messages sont liées à un user
      *
      * @return  self
      */ 
-    public function setUser1($user1)
+    public function setEmetteur($emetteur)
     {
-        $this->user1 = $user1;
+        $this->emetteur = $emetteur;
 
         return $this;
     }
 
     /**
-     * Get the value of user2
+     * Get les messages sont liées à un user
      */ 
-    public function getUser2()
+    public function getDestinataire()
     {
-        return $this->user2;
+        return $this->destinataire;
     }
 
     /**
-     * Set the value of user2
+     * Set les messages sont liées à un user
      *
      * @return  self
      */ 
-    public function setUser2($user2)
+    public function setDestinataire($destinataire)
     {
-        $this->user2 = $user2;
+        $this->destinataire = $destinataire;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of date
+     *
+     * @return  \DateTime
+     */ 
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set the value of date
+     *
+     * @param  \DateTime  $date
+     *
+     * @return  self
+     */ 
+    public function setDate(\DateTime $date)
+    {
+        $this->date = $date;
 
         return $this;
     }

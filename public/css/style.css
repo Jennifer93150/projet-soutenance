@@ -8,10 +8,13 @@
  
 
 /*********** HEADER **********/
+header{
+    background-color: #B28871;
+}
 
 /*div qui contient logo et nav*/
 .header{ 
-
+    
     display:flex;
     justify-content: space-between;
     height: 120px;
@@ -24,8 +27,6 @@
     
     height: 90px;
     width: auto;
-    margin-right: 5%;
-    margin-left: 6%;
     
 }
 
@@ -46,7 +47,7 @@
 
 header a{
     font-family: 'Lato';
-    color: #B28871;
+    color: white;;
     margin-left: 40px;
     margin-top:25px;
     text-decoration: none;
@@ -70,9 +71,7 @@ header a:hover{
 
 
 /*********** BODY **********/
-.container-fluid{
-    width: 90%;
-}
+
 
 /*{
     background-image: url(../img/background.png);
@@ -85,6 +84,11 @@ header a:hover{
     
 
 /*}*/
+
+/*ca ne fonctionne pas a voir*/
+.titre{
+    width: 100%;
+}
 
 h1{ /* Tous les titres */
     font-family: 'Lato';
