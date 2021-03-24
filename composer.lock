@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58ff7a2922265d1d286cb23293135edb",
+    "content-hash": "1261f7b5d0381255654fad6c4097d251",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -6724,16 +6724,16 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.30.1",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "4021ece4955286e0816a34b3d545bf1a917afb0f"
+                "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/4021ece4955286e0816a34b3d545bf1a917afb0f",
-                "reference": "4021ece4955286e0816a34b3d545bf1a917afb0f",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
+                "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
                 "shasum": ""
             },
             "require": {

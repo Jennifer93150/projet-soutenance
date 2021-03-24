@@ -8,6 +8,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Table(name="user")
@@ -68,7 +70,6 @@ class User implements UserInterface
     private $acceptation;
 
     
-
     /**
      * @ORM\Column(type="json")
      */
@@ -84,7 +85,7 @@ class User implements UserInterface
 //JE LIE user A produit
     /**
      * Un user a potentiellement plusieurs produits
-     * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="message")
+     * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="user")
      */
     private $messages;
     
@@ -270,4 +271,6 @@ class User implements UserInterface
 
         return $this;
     }
+
+   
 }

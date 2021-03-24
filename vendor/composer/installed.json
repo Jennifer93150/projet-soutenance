@@ -4405,6 +4405,7 @@
     },
     {
         "name": "symfony/maker-bundle",
+<<<<<<< HEAD
         "version": "v1.30.1",
         "version_normalized": "1.30.1.0",
         "source": {
@@ -4416,6 +4417,19 @@
             "type": "zip",
             "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/4021ece4955286e0816a34b3d545bf1a917afb0f",
             "reference": "4021ece4955286e0816a34b3d545bf1a917afb0f",
+=======
+        "version": "v1.30.0",
+        "version_normalized": "1.30.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/maker-bundle.git",
+            "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
+            "reference": "a9ff8a8600b6354d79fd16c72c24757dcb086c3c",
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
             "shasum": ""
         },
         "require": {
@@ -4443,7 +4457,11 @@
             "symfony/security-core": "^4.0|^5.0",
             "symfony/yaml": "^4.0|^5.0"
         },
+<<<<<<< HEAD
         "time": "2021-03-22T17:49:17+00:00",
+=======
+        "time": "2021-03-19T18:32:22+00:00",
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {

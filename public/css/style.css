@@ -5,111 +5,121 @@
     box-sizing: border-box;
 }
 
-/*********** HEADER **********/
+ 
 
-.bg-header {
+/*********** HEADER **********/
+header{
     background-color: #B28871;
 }
 
 /*div qui contient logo et nav*/
 .header{ 
-
+    
     display:flex;
     justify-content: space-between;
+    height: 120px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    
 }
 
 .logo{
-    margin: 10px;
+    
+    height: 90px;
+    width: auto;
+    
+}
+
+.logo:hover{
+    
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 /*lien de la navbar*/
+
 header a{
-    color: white;
-    margin-left: 20px;
+    font-family: 'Lato';
+    color: white;;
+    margin-left: 40px;
     margin-top:25px;
     text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+header a:hover{
+    color: #ff9f7c;
+    z-index: 1;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 
 
 /*********** BODY **********/
-main{
+
+
+/*{
     background-image: url(../img/background.png);
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /*par defaut:contain= payage ou portrait( applique img tt largeur du main sans tt couvrir), */
-    padding: 35px/*1ER top bottom*/ 0/*2EME left right*/;
-    background-size:100%;
+    /*background-size: cover; /*par defaut:contain= payage ou portrait( applique img tt largeur du main sans tt couvrir), */
+    /*padding: 35px/*1ER top bottom*/ /*0/*2EME left right*/
+    
 
-}
+/*}*/
 
-h1{
+
+
+h1{ /* Tous les titres */
+    font-family: 'Lato';
     background-color: #CFFFE280;
+    word-spacing: 0.65rem;
 }
 
-/********* LES FORMULAIRES *********/
 
-/********* FORMULAIRE PAGES CONNEXION *********/
 
-.bg-vert{ /* contenaire du formulaire*/
 
-    background: #CFFFE280;
-    color: rgb(0, 0, 0);
-    margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    padding: 10px;
-    width: 70%;
+/**** BOUTON SCROLL ****/
 
+.fas{ /* Taille Fleche du scroll */
+
+    font-size: 2.5rem;
+    color:  #03989E;
+   
 }
+/*.fa-arrow-up:before { 
 
+    
+}*/
 
 
 /******** PAGE AJOUTER UN TROC *****************/
 
-.type{
-    background-color: #CFFFE2;
-    font-size: 18px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    margin-right:80%;
-}
+.bouton-scroll{ /* couleur bouton scroll */
 
-.annonce{
-    background-color: #CFFFE2;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    margin-right:30px;
-    margin-left:30px;
-    
+    background: #03989E;
+    height: 10% !important;
 
-}
-
-/******************** PAGE CATEGORIE MAISON **********/
-
-.card-size{
-    background-color: #FFDAC3;
 }
 
 /******************** PAGE CONTACTEZ-NOUS **********/
-
-
-
-
-
-
-/******************** PAGE LOGIN.HTML.TWIG **********/
-.bouton{
-    padding: 20px;
-}
 
 
 

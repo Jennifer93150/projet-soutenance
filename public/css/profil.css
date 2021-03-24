@@ -1,0 +1,17 @@
+/********** GENERAL **********/
+
+*
+{
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 200px) and (max-width: 992px) { /* En dessous de 992 */
+
+    .contenu-profil {
+
+        padding: 0px;
+
+    }
+
+}

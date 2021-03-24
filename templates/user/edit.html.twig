@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Je modifie mon profil{% endblock %}
+
+
+
+{% block contenuPrincipal %}
+
+<section>
+    <div class="shadow-lg">
+        <h1 class="text-center my-5 py-3">Je modifie mon profil</h1>
+    </div>
+
+    {# FORMULAIRE#}
+    <form method="post">
+        <div class="container shadow bg-vert">
+
+            <div class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 mx-auto">
+                            {{ form_start(Formulaire) }}
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    {{ form_row(Formulaire.nom) }}
+                                    {{ form_row(Formulaire.email) }}
+                                    {{ form_row(Formulaire.password) }}
+                                    {{ form_row(Formulaire.cp) }}
+                                    {{ form_row(Formulaire.ville) }}
+                                    {{ form_row(Formulaire.telephone) }}
+                                    {{ form_row(Formulaire.enregistrer) }}
+
+                                </div>
+                            </div>
+                            {{ form_end(Formulaire) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+{% endblock %}

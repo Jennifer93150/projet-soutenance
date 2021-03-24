@@ -25,7 +25,10 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+<<<<<<< HEAD
             'stylesheets' => [$this, 'block_stylesheets'],
+=======
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
             'contenuPrincipal' => [$this, 'block_contenuPrincipal'],
         ];
     }
@@ -55,6 +58,7 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
 
     }
 
+<<<<<<< HEAD
     // line 3
     public function block_stylesheets($context, array $blocks = [])
     {
@@ -82,6 +86,9 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
     }
 
     // line 8
+=======
+    // line 5
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -91,6 +98,7 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
+<<<<<<< HEAD
         // line 9
         echo "
 <h1 class=\"text-center\">Contactez-nous</h1>
@@ -125,6 +133,12 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
         </div>
     </form>
 </section>            
+=======
+        // line 6
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
+
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -146,13 +160,18 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  95 => 9,  85 => 8,  73 => 5,  69 => 4,  59 => 3,  36 => 1,);
+=======
+        return array (  68 => 6,  58 => 5,  35 => 1,);
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
+<<<<<<< HEAD
 {% block stylesheets %}
 {{ parent() }}
 <link href=\"{{asset('/css/style.css')}}\" rel=\"stylesheet\" media=\"all\">
@@ -193,5 +212,13 @@ class __TwigTemplate_a533af49e93e30151949443b97a869d2594c05c70a20a2cd4e05e56b10d
     </form>
 </section>            
 {% endblock %}", "troc-eco/contact.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/contact.html.twig");
+=======
+
+
+{% block contenuPrincipal %}
+{{parent()}}
+
+{% endblock %}", "troc-eco/contact.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/contact.html.twig");
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3
     }
 }

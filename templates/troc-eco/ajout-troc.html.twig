@@ -6,33 +6,35 @@
 
 {% block contenuPrincipal %}
     <section>
-        <div>
-            <h1 class="text-center"> Ajouter un troc</h1>
+        <div class="shadow-lg">
+            <h1 class="text-center py-3 my-5"> Ajouter un troc</h1>
         </div>
+        {# FORMULAIRE#}
+        <div class="container shadow bg-vert rounded">
+            <form method="post">
+                <div>
+                    {{ form_start(Formulaire) }}
+                        <div class="my-custom-class-for-errors">
+                            {{ form_errors(Formulaire) }}
+                        </div>
 
-        <div class="bg-vert">
-            {{ form_start(Formulaire) }}
-                <div class="my-custom-class-for-errors">
-                    {{ form_errors(Formulaire) }}
-                </div>
-
-                <div class="column">
-                    <h2 class="annonce">Annonce</h2>
-                    <div class="col">
+                        <div class="row">
+                            <h2 class="annonce">Annonce</h2>
                         
-                    </div>
-                    <h2 class="type">Categorie</h2>
-                    
-                    <div class="col" id="some-custom-id">
-                        {{ form_row(Formulaire.categorie) }}
-                        {{ form_row(Formulaire.photo) }}
-                        {{ form_row(Formulaire.titre) }}
-                        {{ form_row(Formulaire.description) }}
-                        {{ form_row(Formulaire.save) }}
-                    </div>
-                        
+                            <h2 class="type">Categorie</h2>
+                            
+                            <div class="col" id="some-custom-id">
+                                {{ form_row(Formulaire.categorie) }}
+                                {{ form_row(Formulaire.photo) }}
+                                {{ form_row(Formulaire.titre) }}
+                                {{ form_row(Formulaire.description) }}
+                                {{ form_row(Formulaire.save) }}
+                            </div>
+                                
+                        </div>
+                    {{ form_end(Formulaire) }}
                 </div>
-            {{ form_end(Formulaire) }}
+            </form>
         </div>
     </section>
 

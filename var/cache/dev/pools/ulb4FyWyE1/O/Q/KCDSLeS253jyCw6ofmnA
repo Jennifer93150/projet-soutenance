@@ -11,7 +11,12 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 '/categorie/puericulture',
             ],
             'name' => [
-                'puericulture',
+                'Puericulture',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
             ],
         ],
     ],

@@ -11,7 +11,12 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 '/categorie/maison',
             ],
             'name' => [
-                'maison',
+                'Maison',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
             ],
         ],
     ],

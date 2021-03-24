@@ -11,6 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\File;
 
 class ProduitType extends AbstractType
 {
@@ -18,31 +19,15 @@ class ProduitType extends AbstractType
     {
         $builder
         
-            /*->add('type', ChoiceType::class, [
-                'label' => 'Type',
-                'choices' => [
-                     'J\'ajoute' => 'Ajout',
-                     'Je recherche' => 'Recherche',
-                   
-                 ],
-                'expanded' => true,
-                'multiple' => false
-        ])*/
             # SELECT CATEGORIES
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class, 
                 'choice_label' => 'nom',
                 'required' => true,]) 
-           
-            ->add('photo', FileType::class, ['label' => 'photo'])
-
+            ->add('photo', FileType::class, [
+                'label' => 'photo',])
             ->add('titre',TextType::class, ['label' => 'titre','required' => true,])
             ->add('description', TextType::class, ['label' => 'description','required' => true,])
-            
-            /*->add('products', EntityType::class, [
-                'class' => Product::class,
-                'choice_label' => 'products',])*/
-
             ->add('save', SubmitType::class, [
                 'attr' => ['class' => 'save'],
             ]);

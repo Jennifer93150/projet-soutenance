@@ -1,0 +1,64 @@
+/********** GENERAL **********/
+
+*
+{
+    box-sizing: border-box;
+}
+
+/*********** MAIN **********/
+/*.partie1{
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.lien-profil{
+    color: #ff9F7C;
+    font-family: 'Lato';
+    text-decoration: none;
+   
+}
+
+.lien-profil:hover{
+    color: #fbf195;
+}
+
+.h2-partie1{
+
+    color: #cfffe2;
+    font-family: 'Lato';
+    font-size: 9.5vh;
+    text-shadow:#e7f6ff 0 -1px 0,
+                #00abf0 1px 1px 0,
+                #03989E 2px 2px 0,
+                #00ceff 3px 3px 0,
+                #006392 4px 4px 0,
+                #FFF 5px 5px 0,
+                #333 5px 5px 10px;
+                
+}
+
+/* Images */
+.robe{
+    width: 30%;
+    filter: drop-shadow(30px 10px 4px rgb(121, 121, 121));
+    
+}
+
+.livres{
+    filter: drop-shadow(30px 10px 4px rgb(121, 121, 121));
+}
+
+.figcaption{
+
+    color:#FAB725;
+    font-family: 'Anton', sans-serif;
+    font-size: 6vh;
+    
+}
+
+.partie2{
+    background-color: #ff9f7c;
+}

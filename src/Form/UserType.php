@@ -3,11 +3,10 @@
 namespace App\Form;
 
 use App\Entity\User;
-#use App\Entity\Produit;
-#use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -25,11 +24,10 @@ class UserType extends AbstractType
              
             ->add('nom', TextType::class, ['label' => 'Nom','required' => true,])
             ->add('email', EmailType::class, ['label' => 'Email','required' => true,])
-            ->add('password', TextType::class, ['label' => 'Mot de passe','required' => true,]) 
+            ->add('password', PasswordType::class, ['label' => 'Mot de passe','required' => true,]) 
             ->add('cp', IntegerType::class, ['label' => 'Code postal'])
             ->add('ville', TextType::class, ['label' => 'Ville'])
             ->add('telephone', TelType::class, ['label' => 'Téléphone'])
-            /* NE PAS OUBLIER LES ENTITY QUI Y SONT LIEES*/
             ->add('acceptation', RadioType::class, ['label' => 'J\'ai lu et accepté la Politique de confidentialité', 'required' => true,])
 
             ->add('enregistrer', SubmitType::class, [

@@ -71,8 +71,8 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
         echo "    <div class=\"footer\">
      <!-- DEBUT CONTENU FOOTER -->
         <!-- btn de scroll TELECHARGER FONTAWESOME -->
-        <a href=\"#\" class=\"scroll-btn\">
-            <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+        <a href=\"#\" class=\"btn-scroll\">
+            <i class=\"fas fa-arrow-circle-up\"></i>
         </a>
 
         <!-- DEBUT FOOTER  -->
@@ -130,8 +130,8 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
     <div class=\"footer\">
      <!-- DEBUT CONTENU FOOTER -->
         <!-- btn de scroll TELECHARGER FONTAWESOME -->
-        <a href=\"#\" class=\"scroll-btn\">
-            <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+        <a href=\"#\" class=\"btn-scroll\">
+            <i class=\"fas fa-arrow-circle-up\"></i>
         </a>
 
         <!-- DEBUT FOOTER  -->

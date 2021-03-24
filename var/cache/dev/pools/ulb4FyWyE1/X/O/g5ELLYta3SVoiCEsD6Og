@@ -1,3 +1,7 @@
 <?php //%255B%255BC%255DCountable%2523count%255D%255B1%255D
 
+<<<<<<< HEAD:var/cache/dev/pools/ulb4FyWyE1/X/O/g5ELLYta3SVoiCEsD6Og
 return [PHP_INT_MAX, 1616501625];
+=======
+return [PHP_INT_MAX, 1616426437];
+>>>>>>> 912df4ed0d6529199cc0e3745e5dad9219e504f3:var/cache/dev/pools/jq6xm7vQ9Z/X/O/g5ELLYta3SVoiCEsD6Og

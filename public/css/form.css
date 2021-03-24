@@ -1,0 +1,32 @@
+/******** PAGE AJOUTER UN TROC *****************/
+
+.bg-vert{
+    background-color: #CFFFE280;
+    padding: 50px;
+}
+
+.type{
+    background-color: #CFFFE2;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-right:80%;
+}
+
+.annonce{
+    background-color: #CFFFE2;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-right:30px;
+    margin-left:30px;
+
+}
+
+/******************** PAGE LOGIN.HTML.TWIG **********/
+
+.bouton{
+    padding: 20px;
+}

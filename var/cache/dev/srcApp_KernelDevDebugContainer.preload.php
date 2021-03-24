@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container2IphNxO/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerFvAMaEu/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -34,9 +34,14 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\DefaultController';
+$classes[] = 'App\Controller\GestionController';
+$classes[] = 'App\Controller\MessageController';
 $classes[] = 'App\Controller\ProduitController';
 $classes[] = 'App\Controller\SecurityController';
 $classes[] = 'App\Controller\UserController';
+$classes[] = 'App\Form\CategorieType';
+$classes[] = 'App\Form\MessageType';
+$classes[] = 'App\Form\ModifProfilType';
 $classes[] = 'App\Form\ProduitType';
 $classes[] = 'App\Form\UserType';
 $classes[] = 'App\Repository\CategorieRepository';
@@ -348,6 +353,7 @@ $classes[] = 'Symfony\Component\Security\Core\Encoder\EncoderFactory';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallMap';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallContext';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallConfig';
+$classes[] = 'Symfony\Bundle\SecurityBundle\Security\LazyFirewallContext';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\ExceptionListener';
 $classes[] = 'Symfony\Component\Security\Http\HttpUtils';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\LogoutListener';

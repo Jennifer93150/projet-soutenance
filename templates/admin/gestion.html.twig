@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | J'ajoute une catégorie{% endblock %}
+
+
+
+{% block contenuPrincipal %}
+<section>
+    <div class="shadow-lg">
+        <h1 class="text-center py-3 my-5">J'ajoute une catégorie</h1>
+    </div>
+
+    <div class="container shadow bg-vert rounded">
+        {{ form_start(Formulaire) }}
+            <div class="my-custom-class-for-errors">
+                {{ form_errors(Formulaire) }}
+            </div>
+
+            <div class="col" id="some-custom-id">
+                {{ form_row(Formulaire.nom) }}
+
+                {{ form_row(Formulaire.photo) }}
+                {{ form_row(Formulaire.save) }}
+            </div>
+            
+        {{ form_end(Formulaire) }}
+    </div>
+</section>
+    
+   
+
+{% endblock %}

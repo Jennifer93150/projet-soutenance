@@ -5,8 +5,8 @@ namespace App\Entity;
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -29,7 +29,7 @@ class Produit
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $photo;
 
@@ -61,6 +61,19 @@ class Produit
      * @ORM\JoinColumn(name="categorie_id", referencedColumnName="id")
      */
     private $categorie;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime", nullable=true)
+     */
+    private $date;
+ 
+ 
+    public function __construct()
+    {
+        $this->date = new \dateTime('now');
+    }
 
    
     public function getId(): ?int
@@ -121,7 +134,7 @@ class Produit
         return $this->user;
     }
 
-    public function setUser(int $user): self
+    public function setUser($user): self
     {
         $this->user = $user;
 
@@ -171,6 +184,30 @@ class Produit
     public function setPhotoFile(File $photoFile)
     {
         $this->photoFile = $photoFile;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of date
+     *
+     * @return  \DateTime
+     */ 
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set the value of date
+     *
+     * @param  \DateTime  $date
+     *
+     * @return  self
+     */ 
+    public function setDate(\DateTime $date)
+    {
+        $this->date = $date;
 
         return $this;
     }
