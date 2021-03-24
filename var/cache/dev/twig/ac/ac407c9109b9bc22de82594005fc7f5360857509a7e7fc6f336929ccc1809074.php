@@ -1175,6 +1175,6 @@ class __TwigTemplate_6f2460e17b2fa8cc34e6fff03dd974ce1ec6b70eb4c3ac8abef9a4a2571
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

@@ -72,6 +72,6 @@ class __TwigTemplate_f6079cfdf3c4a7faa43316a29d03dea28d4dc68659572c2b118fd38308d
     {
         return new Source("{% extends 'base.html.twig' %}
 
-", "troc-eco/annonce.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/annonce.html.twig");
+", "troc-eco/annonce.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/annonce.html.twig");
     }
 }

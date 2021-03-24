@@ -803,6 +803,6 @@ class __TwigTemplate_0312247e1db29c5e6ee158ac3077a45f333d275a44d4da76e1d6420825f
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

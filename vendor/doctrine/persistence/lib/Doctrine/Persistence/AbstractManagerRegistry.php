@@ -4,8 +4,9 @@ namespace Doctrine\Persistence;
 
 use InvalidArgumentException;
 use ReflectionClass;
-
+use function class_exists;
 use function explode;
+use function interface_exists;
 use function sprintf;
 use function strpos;
 
@@ -183,8 +184,6 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
                 return $manager;
             }
         }
-
-        return null;
     }
 
     /**
@@ -211,11 +210,11 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
     /**
      * {@inheritdoc}
      */
-    public function getRepository($persistentObject, $persistentManagerName = null)
+    public function getRepository($persistentObjectName, $persistentManagerName = null)
     {
         return $this
-            ->selectManager($persistentObject, $persistentManagerName)
-            ->getRepository($persistentObject);
+            ->selectManager($persistentObjectName, $persistentManagerName)
+            ->getRepository($persistentObjectName);
     }
 
     /**
@@ -238,7 +237,7 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
         return $this->getManager($name);
     }
 
-    private function selectManager(string $persistentObjectName, ?string $persistentManagerName = null): ObjectManager
+    private function selectManager(string $persistentObjectName, ?string $persistentManagerName = null) : ObjectManager
     {
         if ($persistentManagerName !== null) {
             return $this->getManager($persistentManagerName);
@@ -247,3 +246,6 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
         return $this->getManagerForClass($persistentObjectName) ?? $this->getManager();
     }
 }
+
+class_exists(\Doctrine\Common\Persistence\AbstractManagerRegistry::class);
+interface_exists(ObjectManager::class);

@@ -218,6 +218,6 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
             </div>
         {% endblock %}
-</header>", "composants/nav.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/composants/nav.html.twig");
+</header>", "composants/nav.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/composants/nav.html.twig");
     }
 }

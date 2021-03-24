@@ -117,40 +117,49 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         }
         // line 21
         echo "
-        
-       
+        <div>
+            <div id=\"bouton\" class=\"row bg-vert\">
+                <div class=\"col-lg-6\" style=\"background-color:#CFFFE2\">
+                    <a class=\" text-dark btn\" href=\"";
+        // line 25
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
+        echo "\">Je crée un compte</a>
+                </div>
+          
+                <div class=\"col-lg-6\" style=\"background-color:#CFFFE2\">
+                    <a class=\" text-dark btn\" href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">Je me connecte</a>
+                        
+                </div>
+            </div>
+        </div>
         
         <div class=\"bg-vert\">
             <div>
-                <button type=\"button\" class=\"btn btn-outline-info mb-3\">
-                    <a class=\"text-dark btn\" href=\"";
-        // line 28
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
-        echo "\">Je crée un compte</a>
-                </button>
-            </div>
-            <div>
                 <label for=\"inputEmail\">Email</label>
                 <input type=\"email\" value=\"";
-        // line 33
-        echo twig_escape_filter($this->env, (isset($context["nom"]) || array_key_exists("nom", $context) ? $context["nom"] : (function () { throw new RuntimeError('Variable "nom" does not exist.', 33, $this->source); })()), "html", null, true);
+        // line 38
+        echo twig_escape_filter($this->env, (isset($context["nom"]) || array_key_exists("nom", $context) ? $context["nom"] : (function () { throw new RuntimeError('Variable "nom" does not exist.', 38, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control mt-2 mb-3\" required autofocus>
                 <label for=\"inputPassword\">Mot de passe</label>
                 <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control mt-2 mb-3\" required>
 
                 <input type=\"hidden\" name=\"_csrf_token\"
                     value=\"";
-        // line 38
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
-
-                <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
+            </div>
+            <div class=\"mb-3 text-end\">
+                <button class=\"btn px-5\" style=\"background-color:#FFDAC3\" type=\"submit\">Se connecter</button>
             </div>
         </div>
         
 
         ";
-        // line 55
+        // line 61
         echo "
         
     </form>
@@ -175,7 +184,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 
     public function getDebugInfo()
     {
-        return array (  154 => 55,  144 => 38,  136 => 33,  128 => 28,  119 => 21,  113 => 18,  110 => 17,  108 => 16,  105 => 15,  99 => 13,  97 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 61,  152 => 43,  144 => 38,  132 => 29,  125 => 25,  119 => 21,  113 => 18,  110 => 17,  108 => 16,  105 => 15,  99 => 13,  97 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -201,15 +210,20 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             </div>
         {% endif %}
 
-        
-       
+        <div>
+            <div id=\"bouton\" class=\"row bg-vert\">
+                <div class=\"col-lg-6\" style=\"background-color:#CFFFE2\">
+                    <a class=\" text-dark btn\" href=\"{{ path('inscription') }}\">Je crée un compte</a>
+                </div>
+          
+                <div class=\"col-lg-6\" style=\"background-color:#CFFFE2\">
+                    <a class=\" text-dark btn\" href=\"{{ path('app_login') }}\">Je me connecte</a>
+                        
+                </div>
+            </div>
+        </div>
         
         <div class=\"bg-vert\">
-            <div>
-                <button type=\"button\" class=\"btn btn-outline-info mb-3\">
-                    <a class=\"text-dark btn\" href=\"{{ path('inscription') }}\">Je crée un compte</a>
-                </button>
-            </div>
             <div>
                 <label for=\"inputEmail\">Email</label>
                 <input type=\"email\" value=\"{{ nom }}\" name=\"email\" id=\"inputEmail\" class=\"form-control mt-2 mb-3\" required autofocus>
@@ -218,8 +232,9 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 
                 <input type=\"hidden\" name=\"_csrf_token\"
                     value=\"{{ csrf_token('authenticate') }}\">
-
-                <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
+            </div>
+            <div class=\"mb-3 text-end\">
+                <button class=\"btn px-5\" style=\"background-color:#FFDAC3\" type=\"submit\">Se connecter</button>
             </div>
         </div>
         
@@ -238,6 +253,6 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         
     </form>
 {% endblock %}
-", "security/login.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/security/login.html.twig");
+", "security/login.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/security/login.html.twig");
     }
 }

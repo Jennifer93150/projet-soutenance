@@ -122,6 +122,6 @@ class __TwigTemplate_98446c56db855930a0b642c23389a94650020996b513e08724548b8b8bd
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/table.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/table.html.twig");
+", "@WebProfiler/Profiler/table.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/table.html.twig");
     }
 }

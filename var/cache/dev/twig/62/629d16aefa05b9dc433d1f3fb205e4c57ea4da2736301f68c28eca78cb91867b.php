@@ -193,6 +193,6 @@ class __TwigTemplate_e7898a2e7bcecce5e58b9223a0c72f98433973b728ee90f6a4976e0a03a
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

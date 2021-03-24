@@ -19,15 +19,20 @@
             </div>
         {% endif %}
 
-        
-       
+        <div>
+            <div id="bouton" class="row bg-vert">
+                <div class="col-lg-6" style="background-color:#CFFFE2">
+                    <a class=" text-dark btn" href="{{ path('inscription') }}">Je crée un compte</a>
+                </div>
+          
+                <div class="col-lg-6" style="background-color:#CFFFE2">
+                    <a class=" text-dark btn" href="{{ path('app_login') }}">Je me connecte</a>
+                        
+                </div>
+            </div>
+        </div>
         
         <div class="bg-vert">
-            <div>
-                <button type="button" class="btn btn-outline-info mb-3">
-                    <a class="text-dark btn" href="{{ path('inscription') }}">Je crée un compte</a>
-                </button>
-            </div>
             <div>
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ nom }}" name="email" id="inputEmail" class="form-control mt-2 mb-3" required autofocus>
@@ -36,8 +41,9 @@
 
                 <input type="hidden" name="_csrf_token"
                     value="{{ csrf_token('authenticate') }}">
-
-                <button class="btn btn-outline-info" type="submit">Se connecter</button>
+            </div>
+            <div class="mb-3 text-end">
+                <button class="btn px-5" style="background-color:#FFDAC3" type="submit">Se connecter</button>
             </div>
         </div>
         

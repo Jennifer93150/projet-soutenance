@@ -256,6 +256,6 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
 
 </section>
 
-{% endblock %}", "troc-eco/politique.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/politique.html.twig");
+{% endblock %}", "troc-eco/politique.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/politique.html.twig");
     }
 }

@@ -83,6 +83,6 @@ class __TwigTemplate_b1e7a4e104b04ca3cbf63cfe37ba9cb79dbc4a1c3e84801b78958beeb5a
 <?xml version=\"1.0\" encoding=\"{{ _charset }}\" ?>
 
 <error code=\"{{ status_code }}\" message=\"{{ status_text }}\" />
-", "@Twig/Exception/error.xml.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/error.xml.twig");
+", "@Twig/Exception/error.xml.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/error.xml.twig");
     }
 }

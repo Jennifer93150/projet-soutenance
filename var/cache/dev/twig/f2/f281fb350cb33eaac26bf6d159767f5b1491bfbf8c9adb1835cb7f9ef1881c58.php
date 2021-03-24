@@ -639,6 +639,6 @@ class __TwigTemplate_9b0ffc67eb586859a251903c9aec8f81edf5fa7f2d937a6f56ea3270c6d
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
+", "@Twig/base_js.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
     }
 }

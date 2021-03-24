@@ -1671,6 +1671,6 @@ class __TwigTemplate_f865d0ec8d679f2568f265aa123d01fc7663e77c3cf08734d0d10a4f158
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

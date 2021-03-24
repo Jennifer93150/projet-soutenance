@@ -1,1 +1,42 @@
 {% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{asset('/css/style.css')}}" rel="stylesheet" media="all">
+{% endblock %}
+
+{% block contenuPrincipal %}
+
+<h1 class="text-center">Contactez-nous</h1>
+
+<section id="formulaire">
+    <form action="#" method="POST">
+        <div class="container bg-vert">
+            <div class="row">
+                <div class="mb-3">
+                    <h2 class="text-end">Un petit<br>message...</br></h2>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Votre nom</label>
+                    <input class="form-control" type="text" aria-label="default input example">
+                </div>
+                <div class="mb-3">   
+                    <label for="exampleFormControlInput1" class="form-label">Votre prénom</label>
+                    <input class="form-control" type="text"  aria-label="default input example">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Votre email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3 text-end">
+                    <button class="btn px-5" style="background-color:#FFDAC3" type="submit">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>            
+{% endblock %}

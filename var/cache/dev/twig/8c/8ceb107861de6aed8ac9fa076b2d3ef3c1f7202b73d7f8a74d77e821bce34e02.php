@@ -157,6 +157,6 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
 
 {% endblock %}
 
-</footer>", "composants/footer.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/composants/footer.html.twig");
+</footer>", "composants/footer.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/composants/footer.html.twig");
     }
 }

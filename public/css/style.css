@@ -69,6 +69,7 @@ h1{
 }
 
 
+
 /******** PAGE AJOUTER UN TROC *****************/
 
 .type{
@@ -92,8 +93,37 @@ h1{
 
 }
 
-/******* Affichage Catégorie Maison **********/
+/******************** PAGE CATEGORIE MAISON **********/
 
 .card-size{
     background-color: #FFDAC3;
 }
+
+/******************** PAGE CONTACTEZ-NOUS **********/
+
+
+
+
+
+
+/******************** PAGE LOGIN.HTML.TWIG **********/
+.bouton{
+    padding: 20px;
+}
+
+
+
+
+
+/*********Desktop******/
+
+
+/********Tablette********/
+
+
+/********Mobile********/
+
+
+/**********************
+CSS MEDIA QUERIES
+**********************/

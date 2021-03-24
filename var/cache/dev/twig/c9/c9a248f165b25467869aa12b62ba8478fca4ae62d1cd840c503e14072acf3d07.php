@@ -63,6 +63,6 @@ class __TwigTemplate_be07cb8a51e7656b6fe4a9d51358fbdac18f3a7bd6f763555b04159f614
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => \$type ?? 'url']) ?>
-", "@Framework/Form/url_widget.html.php", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/framework-bundle/Resources/views/Form/url_widget.html.php");
+", "@Framework/Form/url_widget.html.php", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/framework-bundle/Resources/views/Form/url_widget.html.php");
     }
 }

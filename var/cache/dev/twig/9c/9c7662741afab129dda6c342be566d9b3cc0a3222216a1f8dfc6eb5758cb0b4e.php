@@ -110,7 +110,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                         <div class=\"text-center\">
                             <a href=\"";
             // line 21
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vetement");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Vetements");
             echo "\" class=\"align-self-center justify-self-center\">
                                 <img src=\"";
             // line 22
@@ -177,7 +177,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                             
                         </div>
                         <div class=\"text-center\">
-                            <a href=\"{{ path('vetement')}}\" class=\"align-self-center justify-self-center\">
+                            <a href=\"{{ path('Vetements')}}\" class=\"align-self-center justify-self-center\">
                                 <img src=\"{{ asset('img/fer-a-repasser.png')}}\" class=\"card-img-bottom\" alt=\"...\">
                             </a>  
                         </div>
@@ -189,6 +189,6 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
     </div>
 </div>
         
-{% endblock %}", "troc-eco/recherche.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/recherche.html.twig");
+{% endblock %}", "troc-eco/recherche.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/recherche.html.twig");
     }
 }

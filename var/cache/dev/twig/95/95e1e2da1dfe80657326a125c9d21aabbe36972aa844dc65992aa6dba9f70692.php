@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /troc-eco/ajout-troc.html.twig */
+/* troc-eco/ajout-troc.html.twig */
 class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afcec38ac extends \Twig\Template
 {
     private $source;
@@ -39,15 +39,15 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/ajout-troc.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/ajout-troc.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/ajout-troc.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/ajout-troc.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 3, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/ajout-troc.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "troc-eco/ajout-troc.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -135,7 +135,7 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
 
     public function getTemplateName()
     {
-        return "/troc-eco/ajout-troc.html.twig";
+        return "troc-eco/ajout-troc.html.twig";
     }
 
     public function isTraitable()
@@ -190,6 +190,6 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
 
 
 {% endblock %}
-", "/troc-eco/ajout-troc.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/ajout-troc.html.twig");
+", "troc-eco/ajout-troc.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/ajout-troc.html.twig");
     }
 }

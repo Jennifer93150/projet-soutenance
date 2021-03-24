@@ -99,7 +99,7 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
         // line 15
         echo "    <form method=\"post\">
         <div class=\"bg-vert\">
-            <button type=\"button\" class=\"btn btn-outline-info\">
+            <button type=\"button\" class=\"btn px-5\">
                 <a class=\"text-dark btn\" href=\"";
         // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
@@ -158,7 +158,7 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
 {# FORMULAIRE#}
     <form method=\"post\">
         <div class=\"bg-vert\">
-            <button type=\"button\" class=\"btn btn-outline-info\">
+            <button type=\"button\" class=\"btn px-5\">
                 <a class=\"text-dark btn\" href=\"{{ path('app_login') }}\">J'ai déjà un compte</a>
             </button>
             
@@ -169,6 +169,6 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
     </form>
 </section>
 
-{% endblock %}", "user/inscription.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/inscription.html.twig");
+{% endblock %}", "user/inscription.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/user/inscription.html.twig");
     }
 }

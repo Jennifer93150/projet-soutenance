@@ -72,6 +72,6 @@ class __TwigTemplate_58986847eb08ba7d779ca353201696fe3d4dbe4eeae3fdca64833170b5f
     {
         return new Source("{% extends 'base.html.twig' %}
 
-", "user/messages.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/messages.html.twig");
+", "user/messages.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/user/messages.html.twig");
     }
 }

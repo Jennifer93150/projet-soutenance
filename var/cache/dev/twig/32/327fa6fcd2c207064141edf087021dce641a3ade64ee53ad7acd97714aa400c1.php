@@ -139,6 +139,6 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         {% endif %}
     </section>
 
-{% endblock %}", "troc-eco/index.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/index.html.twig");
+{% endblock %}", "troc-eco/index.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/index.html.twig");
     }
 }

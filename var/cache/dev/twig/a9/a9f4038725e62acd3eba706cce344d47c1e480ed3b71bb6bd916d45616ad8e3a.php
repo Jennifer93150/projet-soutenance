@@ -212,6 +212,6 @@ class __TwigTemplate_8d4e1722fd7928193c9a24dd478ac00a1291fa79188fa431e47b7dee09b
     {% endfor %}
     </tbody>
 </table>
-", "@Twig/Exception/logs.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
+", "@Twig/Exception/logs.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
     }
 }

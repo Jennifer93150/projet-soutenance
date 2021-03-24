@@ -275,6 +275,6 @@ class __TwigTemplate_cd9ec0a6e55dfe2e84d89346417834243f5a378eb1f4393f72a1a5f23ab
     </body>
 </html>
 {% block after_html %}{% endblock %}
-", "@Twig/layout.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "@Twig/layout.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

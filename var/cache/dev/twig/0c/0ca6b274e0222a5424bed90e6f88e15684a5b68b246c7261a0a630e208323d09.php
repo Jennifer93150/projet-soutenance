@@ -187,6 +187,6 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
     </ul>
 </div>
 
-{% endblock %}", "troc-eco/categories/puericulture.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/categories/puericulture.html.twig");
+{% endblock %}", "troc-eco/categories/puericulture.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/troc-eco/categories/puericulture.html.twig");
     }
 }

@@ -204,6 +204,6 @@ class __TwigTemplate_615dfadbf744d5a2ade2346f8f4012633ec8c1115f92e8c8d5e3b210b14
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

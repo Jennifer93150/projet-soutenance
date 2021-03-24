@@ -109,6 +109,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                     </div>
                 </div>
             </div>
+        </div>
             <div>
                 <h2>A propos de moi</h2>
                 <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
@@ -119,24 +120,24 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                 
                 -->
                 ";
-        // line 38
+        // line 39
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["mesproduits"]) || array_key_exists("mesproduits", $context) ? $context["mesproduits"] : (function () { throw new RuntimeError('Variable "mesproduits" does not exist.', 38, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["mesproduits"]) || array_key_exists("mesproduits", $context) ? $context["mesproduits"] : (function () { throw new RuntimeError('Variable "mesproduits" does not exist.', 39, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 39
+            // line 40
             echo "                <div class=\"card mb-3\" style=\"max-width: 540px;\">
                     <div class=\"row g-0\">
                         <div class=\"col-md-4\">
                             <img src=\"";
-            // line 42
+            // line 43
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/fer-a-repasser.png"), "html", null, true);
             echo "\" alt=\"img-profil\">
                         </div>
                         <div class=\"col-md-8\">
                             <div class=\"card-body\">
                                 <h5 class=\"card-title\">";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 46), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 47), "html", null, true);
             echo "</h5>
                                 <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small>
@@ -150,7 +151,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 56
         echo "
             </div>
 
@@ -185,7 +186,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
     public function getDebugInfo()
     {
-        return array (  154 => 55,  139 => 46,  132 => 42,  127 => 39,  123 => 38,  105 => 23,  100 => 21,  96 => 20,  92 => 19,  88 => 18,  81 => 14,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  155 => 56,  140 => 47,  133 => 43,  128 => 40,  124 => 39,  105 => 23,  100 => 21,  96 => 20,  92 => 19,  88 => 18,  81 => 14,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -218,6 +219,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                     </div>
                 </div>
             </div>
+        </div>
             <div>
                 <h2>A propos de moi</h2>
                 <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
@@ -258,6 +260,6 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
 
 {% endblock %}
-", "user/profil.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/profil.html.twig");
+", "user/profil.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/user/profil.html.twig");
     }
 }

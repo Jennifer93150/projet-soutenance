@@ -275,6 +275,6 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
     </body>
 </html>
 
-", "base.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/templates/base.html.twig");
     }
 }

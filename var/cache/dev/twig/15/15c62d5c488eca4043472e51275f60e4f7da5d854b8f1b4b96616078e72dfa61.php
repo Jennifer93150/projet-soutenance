@@ -99,6 +99,6 @@ class __TwigTemplate_13b6c7fcc2f8af17982abb39d460d2d83963efb7004ab885f7c4a2be04b
             </trace>
 {% endfor %}
         </traces>
-", "@Twig/Exception/traces.xml.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
+", "@Twig/Exception/traces.xml.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
     }
 }

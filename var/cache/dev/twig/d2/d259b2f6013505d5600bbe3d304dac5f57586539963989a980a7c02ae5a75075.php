@@ -135,6 +135,6 @@ class __TwigTemplate_e58a267b1b963ae4ee99ea006f8d67aef034db449eb859868da58082132
         </div>
     </body>
 </html>
-", "@Twig/Exception/error.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
+", "@Twig/Exception/error.html.twig", "/Applications/MAMP/htdocs/SYMFONY/projet-soutenance/vendor/symfony/twig-bundle/Resources/views/Exception/error.html.twig");
     }
 }
