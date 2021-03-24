@@ -4,15 +4,15 @@
 
 {% block contenuPrincipal %}
 
-<div>
-    <h1 class="text-center">Recherche</h1>
+<div class="shadow-lg">
+    <h1 class="text-center py-3 my-5">Recherche</h1>
 </div>
 <div class="container">
     <div class="row g-2">
             <!-- on boucle que sur le titre -->
             {% for categorie in noscategories %}
 
-                    <div class="card col-lg-5 m-1 rounded">
+                    <div class="carte-categorie card col-lg-5 m-1 shadow rounded">
                         <div class="card-body">
                             <h2 class="card-title text-center">{{ categorie.nom }}</h2>
                             

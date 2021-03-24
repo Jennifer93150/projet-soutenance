@@ -27,9 +27,9 @@ class Message
     /**
      * Les messages sont liées à un user
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="messages")
-     * @ORM\JoinColumn(name="emetteur_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
-    private $emetteur;
+    private $user;
 
 
     //JE LIE mon message A user
@@ -77,9 +77,9 @@ class Message
     /**
      * Get les messages sont liées à un user
      */ 
-    public function getEmetteur()
+    public function getUser()
     {
-        return $this->emetteur;
+        return $this->user;
     }
 
     /**
@@ -87,9 +87,9 @@ class Message
      *
      * @return  self
      */ 
-    public function setEmetteur($emetteur)
+    public function setUser($user)
     {
-        $this->emetteur = $emetteur;
+        $this->user = $user;
 
         return $this;
     }

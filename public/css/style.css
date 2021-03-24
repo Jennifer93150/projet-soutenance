@@ -85,16 +85,15 @@ header a:hover{
 
 /*}*/
 
-/*ca ne fonctionne pas a voir*/
-.titre{
-    width: 100%;
-}
+
 
 h1{ /* Tous les titres */
     font-family: 'Lato';
     background-color: #CFFFE280;
     word-spacing: 0.65rem;
 }
+
+
 
 
 /**** BOUTON SCROLL ****/

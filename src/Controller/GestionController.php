@@ -18,7 +18,7 @@ class GestionController extends AbstractController
     # Fonction ajout nouvelle categorie
 
     /**
-     * @Route("/gestion", name="gestion", methods={"GET","POST"})
+     * @Route("/admin/gestion", name="gestion", methods={"GET","POST"})
      */
     public function create(Request $request)
     {

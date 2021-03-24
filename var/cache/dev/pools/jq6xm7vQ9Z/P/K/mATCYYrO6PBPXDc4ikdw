@@ -10,6 +10,9 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'path' => [
                 '/edit/{id<\\d+>}',
             ],
+            'name' => [
+                'edit_profil',
+            ],
         ],
     ],
     [

@@ -86,8 +86,8 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
         // line 6
         echo "
-<div>
-    <h1 class=\"text-center\">Recherche</h1>
+<div class=\"shadow-lg\">
+    <h1 class=\"text-center py-3 my-5\">Recherche</h1>
 </div>
 <div class=\"container\">
     <div class=\"row g-2\">
@@ -99,7 +99,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 14
             echo "
-                    <div class=\"card col-lg-5 m-1 rounded\">
+                    <div class=\"carte-categorie card col-md-5 m-1 shadow rounded\">
                         <div class=\"card-body\">
                             <h2 class=\"card-title text-center\">";
             // line 17
@@ -165,15 +165,15 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
 {% block contenuPrincipal %}
 
-<div>
-    <h1 class=\"text-center\">Recherche</h1>
+<div class=\"shadow-lg\">
+    <h1 class=\"text-center py-3 my-5\">Recherche</h1>
 </div>
 <div class=\"container\">
     <div class=\"row g-2\">
             <!-- on boucle que sur le titre -->
             {% for categorie in noscategories %}
 
-                    <div class=\"card col-lg-5 m-1 rounded\">
+                    <div class=\"carte-categorie card col-md-5 m-1 shadow rounded\">
                         <div class=\"card-body\">
                             <h2 class=\"card-title text-center\">{{ categorie.nom }}</h2>
                             

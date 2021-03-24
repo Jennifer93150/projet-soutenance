@@ -5234,10 +5234,10 @@
         <argument key="categorieRepository" type="service" id="App\Repository\CategorieRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.g.xob4v" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.RLVVpop" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
+        <argument key="user" type="service" id=".errored..service_locator.RLVVpop.Symfony\Component\Security\Core\User\UserInterface"/>
       </argument>
     </service>
     <service id=".service_locator.D_VxfLH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5246,23 +5246,42 @@
         <argument key="produitRepository" type="service" id="App\Repository\ProduitRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.g.xob4v" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
+      </argument>
+    </service>
     <service id=".service_locator.jmvbEvf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.kZXhKzK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.nRVF04A" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="materiel" type="service" id=".errored..service_locator.kZXhKzK.App\Entity\User"/>
+        <argument key="repository" type="service" id="App\Repository\ProduitRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.1yKVf0j" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.RQPnyo9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="user" type="service" id=".errored..service_locator.RQPnyo9.App\Entity\User"/>
+      </argument>
+    </service>
+    <service id=".service_locator.tIQ5Q0N" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="user" type="service" id=".errored..service_locator.tIQ5Q0N.App\Entity\User"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ijgM4cB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\DefaultController::recherche" type="service" id=".service_locator.hqNb5OX"/>
-        <argument key="App\Controller\MessageController::new" type="service" id=".service_locator.g.xob4v"/>
+        <argument key="App\Controller\MessageController::new" type="service" id=".service_locator.RLVVpop"/>
         <argument key="App\Controller\ProduitController::jardin" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController::livre" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController::maison" type="service" id=".service_locator.D_VxfLH"/>
@@ -5270,11 +5289,12 @@
         <argument key="App\Controller\ProduitController::puericulture" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController::vetement" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.g.xob4v"/>
-        <argument key="App\Controller\UserController::delete" type="service" id=".service_locator.kZXhKzK"/>
-        <argument key="App\Controller\UserController::edit" type="service" id=".service_locator.kZXhKzK"/>
+        <argument key="App\Controller\UserController::delete" type="service" id=".service_locator.tIQ5Q0N"/>
+        <argument key="App\Controller\UserController::edit" type="service" id=".service_locator.RQPnyo9"/>
         <argument key="App\Controller\UserController::new" type="service" id=".service_locator.jmvbEvf"/>
+        <argument key="App\Controller\UserController::produit_user" type="service" id=".service_locator.nRVF04A"/>
         <argument key="App\Controller\DefaultController:recherche" type="service" id=".service_locator.hqNb5OX"/>
-        <argument key="App\Controller\MessageController:new" type="service" id=".service_locator.g.xob4v"/>
+        <argument key="App\Controller\MessageController:new" type="service" id=".service_locator.RLVVpop"/>
         <argument key="App\Controller\ProduitController:jardin" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController:livre" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController:maison" type="service" id=".service_locator.D_VxfLH"/>
@@ -5282,9 +5302,10 @@
         <argument key="App\Controller\ProduitController:puericulture" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\ProduitController:vetement" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.g.xob4v"/>
-        <argument key="App\Controller\UserController:delete" type="service" id=".service_locator.kZXhKzK"/>
-        <argument key="App\Controller\UserController:edit" type="service" id=".service_locator.kZXhKzK"/>
+        <argument key="App\Controller\UserController:delete" type="service" id=".service_locator.tIQ5Q0N"/>
+        <argument key="App\Controller\UserController:edit" type="service" id=".service_locator.RQPnyo9"/>
         <argument key="App\Controller\UserController:new" type="service" id=".service_locator.jmvbEvf"/>
+        <argument key="App\Controller\UserController:produit_user" type="service" id=".service_locator.nRVF04A"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5755,12 +5776,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.1yKVf0j"/>
+      <argument type="service" id=".service_locator.ijgM4cB"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.1yKVf0j"/>
+      <argument type="service" id=".service_locator.ijgM4cB"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5770,7 +5791,9 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
-    <service id=".errored..service_locator.kZXhKzK.App\Entity\User" class="App\Entity\User"/>
+    <service id=".errored..service_locator.RLVVpop.Symfony\Component\Security\Core\User\UserInterface" class="Symfony\Component\Security\Core\User\UserInterface"/>
+    <service id=".errored..service_locator.RQPnyo9.App\Entity\User" class="App\Entity\User"/>
+    <service id=".errored..service_locator.tIQ5Q0N.App\Entity\User" class="App\Entity\User"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.Oy0_ZM6"/>
       <argument type="collection">
@@ -6151,7 +6174,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.1yKVf0j"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ijgM4cB"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

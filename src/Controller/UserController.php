@@ -5,11 +5,13 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -76,12 +78,16 @@ class UserController extends AbstractController
     /**
     * @Route("/profil", name="profil")
     * @IsGranted("IS_AUTHENTICATED_FULLY")
+    * @return Response
     */
-    public function produit_user()
+    public function produit_user(ProduitRepository $repository)
     {
-      
+        $produits = new Produit();
+        $user = $this->getUser();
+        #$produits = $this->getUser();
+        $produits->setUser($user);
         $repository = $this->getDoctrine()->getRepository(Produit::class);
-        $produits = $repository->findBy(['id'=>'user']);
+        $produits = $repository->find($user);
 
         return $this->render('/user/profil.html.twig', ['mesproduits'=>$produits]);
     }
@@ -104,40 +110,59 @@ class UserController extends AbstractController
 
     # Modification du profil
 
-     /**********************UPDATE DE LA TABLE************************/
-
     /**
-     * @Route("/edit/{id<\d+>}")
+     * @Route("/edit/{id<\d+>}", name="edit_profil")
      */
-    public function edit(Request $request, User $materiel)
+    public function edit(Request $request, User $user, UserPasswordEncoderInterface $encoder)
     {
-        $form = $this->createForm(UserType::class, $materiel);
-
+        # création d'un nouvel objet form
+        $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            // va effectuer la requête d'UPDATE en base de données
-            $this->getDoctrine()->getManager()->flush();
+        #Si "submit" ET tout valide
+        if ($form->isSubmitted() && $form->isValid()) { 
+           
+            # Encodage du mot de passe
+            $user->setPassword(
+                $encoder->encodePassword(
+                    $user, $user->getPassword()
+                )
+            );
+
+            # Insertion dans la BDD
+            $em = $this->getDoctrine()->getManager();
+            # Le persist devient inutile car l'objet est deja existant ds la bdd et possede donc un id
+            #$em->persist($user);
+            $em->flush();
+            
+            # Redirection au profil
+            return $this->redirectToRoute('profil');
+            #return new Response('Votre profil a bien été modifié !');
+            
         }
 
-        return $this->render('/user/edit.html.twig', ['Formulaire'=>$form->createView()]);
+        # Passer le formulaire à la vue
+        return $this->render('/user/edit.html.twig', ['Formulaire' => $form->createView()]);
+    
     }
-/************************ DELETE ********************************/
+
+    # DELETE
     
     /**
-     * @Route("/delete/{id<\d+>}")
+     * @Route("/delete/{id<\d+>}", name="delete_user")
+     * @return Response
      */
-    public function delete(Request $request, User $materiel)
+    public function delete(User $user)
     {
+       
         $em = $this->getDoctrine()->getManager();
-        $em->remove($materiel);
+        $em->remove($user);
         $em->flush();
 
-        // redirige la page
-        return $this->redirectToRoute('accueil');
+        # redirige la page
+        # return $this->redirectToRoute('accueil');
+        return new Response('Votre compte a bien été supprimé.');
     }
-/********************************************************************/
-
 
     
 }

@@ -16,7 +16,7 @@
 
 .lien-profil{
     color: #ff9F7C;
-    font-family: 'Anton';
+    font-family: 'Lato';
     text-decoration: none;
    
 }
@@ -25,7 +25,7 @@
     color: #fbf195;
 }
 
-.h2-accueil{
+.h2-partie1{
 
     color: #cfffe2;
     font-family: 'Lato';
@@ -59,3 +59,6 @@
     
 }
 
+.partie2{
+    background-color: #ff9f7c;
+}

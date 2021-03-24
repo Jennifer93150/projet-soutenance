@@ -20,7 +20,7 @@ return [
     'annonces' => [[], ['_controller' => 'App\\Controller\\DefaultController::annonces'], [], [['text', '/annonces']], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\DefaultController::contact'], [], [['text', '/contact']], [], []],
     'politique' => [[], ['_controller' => 'App\\Controller\\DefaultController::politique'], [], [['text', '/politique']], [], []],
-    'gestion' => [[], ['_controller' => 'App\\Controller\\GestionController::create'], [], [['text', '/gestion']], [], []],
+    'gestion' => [[], ['_controller' => 'App\\Controller\\GestionController::create'], [], [['text', '/admin/gestion']], [], []],
     'message' => [[], ['_controller' => 'App\\Controller\\MessageController::new'], [], [['text', '/message']], [], []],
     'ajout' => [[], ['_controller' => 'App\\Controller\\ProduitController::new'], [], [['text', '/ajouter']], [], []],
     'Vetements' => [[], ['_controller' => 'App\\Controller\\ProduitController::vetement'], [], [['text', '/categorie/vetement']], [], []],
@@ -33,6 +33,6 @@ return [
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\UserController::new'], [], [['text', '/inscription']], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\UserController::produit_user'], [], [['text', '/profil']], [], []],
-    'app_user_edit' => [['id'], ['_controller' => 'App\\Controller\\UserController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/edit']], [], []],
-    'app_user_delete' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/delete']], [], []],
+    'edit_profil' => [['id'], ['_controller' => 'App\\Controller\\UserController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/edit']], [], []],
+    'delete_user' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/delete']], [], []],
 ];

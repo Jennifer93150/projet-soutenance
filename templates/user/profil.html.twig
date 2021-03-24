@@ -1,19 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block contenuPrincipal %}
-{{parent()}}
 
-    <section class="">
-        <div >
+    <section>
+        <div  class="shadow-lg">
             <h1 class="text-center my-5 py-3">Mon profil</h1>
         </div>
-        <div class="container bg-vert rounded">
-            <div class=" mb-3">
+        <div class="container shadow bg-vert rounded">
+            <div class="mb-3">
                 <div class="row g-0">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <img class="rounded shadow-lg" src="{{ asset('img/profil.png')}}" alt="img-profil">
                     </div>
-                    <div class="col-md-6 p-5">
+                    <div class="contenu-profil col-lg-6 p-5">
                         
                             <h2 class="text-capitalize">Coucou {{ app.user.nom }}</h2>
                             <p class="">Email : {{ app.user.email }}</p>
@@ -26,7 +25,7 @@
             <div class="my-5">
                 <h2>A propos de moi</h2>
                 <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
-                <a href="{{ path('modifier-profil')}}">Modifier mon profil</a>
+                <a href="{{ path('edit_profil', {'id':app.user.id})}}">Modifier mon profil</a>
             </div>
             <div>
                 <h2>Mes trocs</h2>
@@ -43,13 +42,15 @@
                             <div class="">
                                 <h2 class="text-capitalize">{{ produit.titre }}</h2>
                                 <p class="">{{ produit.description }}</p>
-                                <p class=""><small class="text-muted">{{ produit.date }}</small>
-                                </p>
+                                <p class=""><small class="text-muted">Mettre la date de création de l'objet</small></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
+                <div>
+                    <a href="{{ path('delete_user', {'id':app.user.id})}}">Supprimer mon profil</a>
+                </div>
 
             </div>
 

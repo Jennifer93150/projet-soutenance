@@ -27,7 +27,6 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'contenuPrincipal' => [$this, 'block_contenuPrincipal'],
-            'titre' => [$this, 'block_titre'],
         ];
     }
 
@@ -86,12 +85,15 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 8
-        echo "    ";
-        $this->displayBlock('titre', $context, $blocks);
-        // line 14
-        echo "   
+        echo "    <section id=\"page-principale\">
+        
+        <div  class=\"shadow-lg\">
+            <h1 class=\"text-center my-5 py-3\">Comment je fais ?</h1>
+        </div>
+  
+   
     
-        <section class=\"\">
+        <section class=\"partie1\">
         
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
             IS_AUTHENTICATED_FULLY => si réellement connecté-->
@@ -104,10 +106,10 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             // line 22
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
             echo "\">
-                    Bonjour ";
+                    <h2>Bonjour ";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "nom", [], "any", false, false, false, 23), "html", null, true);
-            echo ".
+            echo ".</h2>
                     <!-- \"app\" : pr acceder a user, la variable est une instance de Symfony\\Bridge\\Twig\\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
                 </a>     
             </div>  
@@ -118,7 +120,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         echo "        
            
                 <article class=\"col\">
-                    <h2 class=\"h2-accueil mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
+                    <h2 class=\"h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
                     <div class=\"container\">
                         <div class=\"row\">
                             
@@ -142,7 +144,18 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                 </article>
 
         </section>
-        <section>
+        <section class=\"partie2\">
+            <div>
+                <article>
+                    <h2 class=\"mb-5 ml-5\">Comment </br>troquer</h2>
+                    <p>
+                    </p>
+                </article>
+
+            </div>
+        
+        </section>
+        <section class=\"partie3\">
             <div>
                 <article>
                     <h2>
@@ -154,46 +167,11 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             </div>
         
         </section>
-        <section>
-            <div>
-                <article>
-                    <h2>
-                    </h2>
-                    <p>
-                    </p>
-                </article>
-
-            </div>
-        
-        </section>
+    </section>
         
     
 
 ";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
-    // line 8
-    public function block_titre($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "titre"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "titre"));
-
-        // line 9
-        echo "        
-        <div class=\"titre\">
-            <h1 class=\"text-center \">Comment je fais ?</h1>
-        </div>
-    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -214,7 +192,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  192 => 9,  182 => 8,  135 => 38,  131 => 37,  127 => 36,  118 => 29,  109 => 23,  105 => 22,  102 => 21,  100 => 20,  92 => 14,  89 => 8,  79 => 7,  60 => 4,  37 => 1,);
+        return array (  137 => 38,  133 => 37,  129 => 36,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -226,22 +204,22 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
 
 {% block contenuPrincipal %}
-    {% block titre %}
+    <section id=\"page-principale\">
         
-        <div class=\"titre\">
-            <h1 class=\"text-center \">Comment je fais ?</h1>
+        <div  class=\"shadow-lg\">
+            <h1 class=\"text-center my-5 py-3\">Comment je fais ?</h1>
         </div>
-    {% endblock %}
+  
    
     
-        <section class=\"\">
+        <section class=\"partie1\">
         
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
             IS_AUTHENTICATED_FULLY => si réellement connecté-->
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <div class=\"text-end\">
                 <a class=\"lien-profil\" href=\"{{ path('profil') }}\">
-                    Bonjour {{ app.user.nom }}.
+                    <h2>Bonjour {{ app.user.nom }}.</h2>
                     <!-- \"app\" : pr acceder a user, la variable est une instance de Symfony\\Bridge\\Twig\\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
                 </a>     
             </div>  
@@ -250,7 +228,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         
            
                 <article class=\"col\">
-                    <h2 class=\"h2-accueil mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
+                    <h2 class=\"h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
                     <div class=\"container\">
                         <div class=\"row\">
                             
@@ -265,7 +243,18 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                 </article>
 
         </section>
-        <section>
+        <section class=\"partie2\">
+            <div>
+                <article>
+                    <h2 class=\"mb-5 ml-5\">Comment </br>troquer</h2>
+                    <p>
+                    </p>
+                </article>
+
+            </div>
+        
+        </section>
+        <section class=\"partie3\">
             <div>
                 <article>
                     <h2>
@@ -277,18 +266,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             </div>
         
         </section>
-        <section>
-            <div>
-                <article>
-                    <h2>
-                    </h2>
-                    <p>
-                    </p>
-                </article>
-
-            </div>
-        
-        </section>
+    </section>
         
     
 

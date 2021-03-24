@@ -89,7 +89,7 @@ class ProduitController extends AbstractController
     public function vetement(ProduitRepository $produitRepository)
     {
         return $this->render('/troc-eco/categories/vetement.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 1])]);
-        return new Response(count($produitRepository). "produits dans cette catégorie.");
+        #return new Response(count($produitRepository). "produits dans cette catégorie.");
     }
     
     # Affichage categorie JARDIN

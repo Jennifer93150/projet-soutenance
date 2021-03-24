@@ -88,27 +88,26 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 8
-        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
 <section>
-    <div>
-        <h1 class=\"text-center\">Mes messages</h1>
+    <div class=\"shadow-lg\">
+        <h1 class=\"text-center py-3 my-5\">Mes messages</h1>
     </div>
     
 ";
         // line 15
-        echo "    <form method=\"post\">
-        <div class=\"bg-vert\">
-            
-            
-            
-            ";
-        // line 20
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 20, $this->source); })()), 'form');
+        echo "    <div class=\"container shadow bg-vert\">
+        <form method=\"post\">
+            <div>
+                
+                ";
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 19, $this->source); })()), 'form');
         echo "
-            
-        </div>
-    </form>
+                
+            </div>
+        </form>
+    </div>
 </section>
 
 ";
@@ -132,7 +131,7 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
 
     public function getDebugInfo()
     {
-        return array (  107 => 20,  100 => 15,  91 => 8,  81 => 7,  62 => 4,  51 => 1,  49 => 3,  36 => 1,);
+        return array (  105 => 19,  99 => 15,  91 => 8,  81 => 7,  62 => 4,  51 => 1,  49 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -144,22 +143,22 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
 
 {# MAIN #}
 {% block contenuPrincipal %}
-{{parent()}}
+
 <section>
-    <div>
-        <h1 class=\"text-center\">Mes messages</h1>
+    <div class=\"shadow-lg\">
+        <h1 class=\"text-center py-3 my-5\">Mes messages</h1>
     </div>
     
 {# FORMULAIRE#}
-    <form method=\"post\">
-        <div class=\"bg-vert\">
-            
-            
-            
-            {{ form(Formulaire) }}
-            
-        </div>
-    </form>
+    <div class=\"container shadow bg-vert\">
+        <form method=\"post\">
+            <div>
+                
+                {{ form(Formulaire) }}
+                
+            </div>
+        </form>
+    </div>
 </section>
 
 {% endblock %}", "/user/message.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/message.html.twig");

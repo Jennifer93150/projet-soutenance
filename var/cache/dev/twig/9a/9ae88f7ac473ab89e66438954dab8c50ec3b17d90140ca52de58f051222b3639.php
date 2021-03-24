@@ -68,7 +68,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
         // line 4
         echo "            <!-- BARRE DE NAVIGATION -->
-            <div class=\"container-fluid header\">
+            <div class=\"container-fluid header mt-4\">
                 <div>
                     <a href=\"";
         // line 7
@@ -178,7 +178,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
     <!-- BLOC HEADER -->
         {% block header %}
             <!-- BARRE DE NAVIGATION -->
-            <div class=\"container-fluid header\">
+            <div class=\"container-fluid header mt-4\">
                 <div>
                     <a href=\"{{ path('accueil') }}\">
                         <img  class=\"logo m-3\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
